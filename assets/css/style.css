@@ -79,7 +79,6 @@ div#homephoto {
 div#cd-nav div#cd-main-nav ul {
 	right: 10px;
 	position: absolute;
-	width: 400px;
 	text-align: right;
 	height: 200px;
 }
@@ -179,6 +178,8 @@ div#cd-main-nav ul li span a:hover {
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
 	margin-right: 10px;
+	margin-top: 4px;
+	border: 1px solid #eee;
 }
 #cd-nav ul.nosubmenu {
 	height: auto !important;
@@ -361,6 +362,7 @@ div.main_list div {
 	line-height: 20px;
 	color: #555;
 	font-size: 12px;
+	border: 1px solid #ddd;
 }
 div.main_list div a {
 	text-decoration: underline;
@@ -394,7 +396,7 @@ div.main_list div span.tag {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	padding: 2px;
-	width: 31%;
+	width: calc(33% - 5px);
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space : nowrap;
@@ -443,7 +445,7 @@ div.main_list div img.photo {
 div.main_list div span.people {
 	float: right;
 	text-align: center;
-	width: 190px;
+	width: 185px;
 	margin-bottom: 10px;
 }
 div.main_list div span.people a span {
@@ -560,7 +562,9 @@ nav > ul.cd-pagination {
 	float: right !important;
 }
 .cd-pagination a, .cd-pagination span {
-	font-size: 14px;
+	font-size: 13px;
+	padding: 5px 10px;
+	line-height: 20px;
 }
 /* 註冊登入 */
 form.cd-form {
@@ -598,7 +602,7 @@ form.signup .cd-filter-content {
 .cd-user-modal-container .cd-switcher li:last-child a {
 	font-size: 15px;
 }
-/* 任務詳細頁 */
+/* 任務詳細頁 ＆ 個人資料頁 */
 div#detail div.detail_content {
 	max-width: 1000px;
 	width: 100%;
@@ -609,10 +613,9 @@ div#detail div.detail_content div.left {
 	float: left;
 }
 div#detail div.detail_content div.right {
-	float: right;
-	width: 180px;
-	padding: 10px;
-	margin-left: 20px;
+	float: left;
+	width: 200px;
+	padding: 0 20px 10px 20px;
 }
 div#detail div.detail_content h1 {
 	font-size: 25px;
@@ -807,6 +810,15 @@ div#detail div.breadcrumb a {
 	padding: 0 5px;
 	border-right: 1px solid #ccc;
 }
+div#detail div.detail_content div.left form.signup {
+	padding: 0px;
+}
+div#detail div.detail_content div.left form.signup div.cd-filter-block {
+	margin-bottom: 0;
+}
+div#detail div.detail_content div.left form.signup div.cd-filter-content {
+	line-height: 40px;
+}
 /* 靜態文稿頁 */
 .row .col {
 	padding: 0;
@@ -935,6 +947,93 @@ ul.tabs div li {
 }
 div.row.is-fixed {
 	padding-top: 50px;
+}
+/* 表格設計 */
+table {
+	width: 100%;
+	font-size: 14px;
+	color: #555;
+}
+.zebra td, .zebra th {
+    padding: 10px;
+    border-bottom: 1px solid #f2f2f2; 
+}
+
+.zebra tbody tr:nth-child(even) {
+    background: #f5f5f5;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+}
+
+.zebra th {
+    text-align: left;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
+    background-image:    -moz-linear-gradient(top, #f5f5f5, #eee);
+    background-image:     -ms-linear-gradient(top, #f5f5f5, #eee);
+    background-image:      -o-linear-gradient(top, #f5f5f5, #eee); 
+    background-image:         linear-gradient(top, #f5f5f5, #eee);
+    font-weight: bold;
+    color: #333;
+}
+
+.zebra th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;  
+}
+
+.zebra th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.zebra th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.zebra tfoot td {
+    border-bottom: 0;
+    border-top: 1px solid #fff;
+    background-color: #f1f1f1;  
+}
+
+.zebra tfoot td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.zebra tfoot td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+.zebra tfoot td:only-child{
+    -moz-border-radius: 0 0 6px 6px;
+    -webkit-border-radius: 0 0 6px 6px
+    border-radius: 0 0 6px 6px
+}
+.zebra tr td span.green {
+	color: green;
+}
+.zebra tr td span.orange {
+	color: #F76C02;
+}
+.zebra tr td span.rate {
+	color: #aaa;
+	font-size: 12px;
+}
+.zebra tr td.right {
+	text-align: right;
 }
 @media only screen and (min-width: 1170px) {
 	.cd-tab-filter.left,
