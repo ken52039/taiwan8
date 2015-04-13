@@ -49,7 +49,7 @@
 			<a href="index.html">台灣幫</a>
 		</header>
 		<div class="home_btn">
-			<a href="javascript:" onclick="popup('popUpDiv')" class="left">發布任務</a>
+			<a href="javascript:" onclick="popup('popUpDiv')" class="left backtop">發布任務</a>
 			<a href="list.html" class="right">搜尋任務</a>
 			<br clear="both">
 		</div>
@@ -157,7 +157,7 @@
 		<ul>
 			<li style="width: 127px;"><img src="http://goo.gl/C4jOQg" class="photo"> <a href="#0">會員管理 <i class="fa fa-external-link"></i></a>
 			</li>
-			<li><a href="javascript:" onclick="popup('popUpDiv')">發布任務</a></li>
+			<li><a href="javascript:" onclick="popup('popUpDiv')" class="backtop">發布任務</a></li>
 			<li><a href="#0">登出</a></li>
 			<li><a href="list.html">任務一覽 <i class="fa fa-angle-down"></i></a>
 				<span>
@@ -465,15 +465,15 @@
 						<br clear="both">
 					</div>
 					<div class="cd-filter-block">
-						<h4><label for="job_11">聯絡電話(選填)</label></h4>						
+						<h4><label for="job_12">聯絡電話(選填)</label></h4>						
 						<div class="cd-filter-content">
-							<input type="number" placeholder="0921987197" id="job_11">
+							<input type="number" placeholder="0921987197" id="job_12">
 							<span class="cd-error-message">格式錯誤</span>
 						</div>
 						<br clear="both">
 					</div>
 					<p class="fieldset">
-						<a class="close" href="javascript:" onclick="popup('popUpDiv')">取消</a>
+						<a class="close backtop" href="javascript:" onclick="popup('popUpDiv')">取消</a>
 						<input class="full-width okgo" type="submit" value="確定送出">
 					</p>
 				</form>
@@ -505,6 +505,10 @@ $(document).ready(function() {
  	minimum : 650,
  	maximum : 1000,
   });
+
+  $(".backtop").click(function(){
+     $('html, body').animate({ scrollTop: 0 }, 'slow');
+  })
  
 });
 </script>
