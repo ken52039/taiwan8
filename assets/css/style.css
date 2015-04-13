@@ -673,8 +673,15 @@ div#detail div.detail_content div.left div.white a.btn {
 	margin-right: 10px;
 }
 div#detail div.detail_content div.left div.white a.btn:hover {
-	background: #555;
+	background: #ccc;
 	text-decoration: none;
+}
+div#detail div.detail_content div.left div.white a.btn_ {
+	background: #aaa;
+	float: right;
+	margin-top: 20px;
+	margin-bottom: 0;
+	margin-left: 10px;
 }
 div#detail div.detail_content div.left div.white div.share {
 	float: right;
@@ -879,16 +886,24 @@ div#detail div.detail_content div.left form.signup div.cd-filter-content {
 	cursor: pointer;
 }
 #popUpDiv form input.okgo,
-#popUpDiv form input.close {
+#popUpDiv form a.close {
 	width: calc(50% - 12px) !important;
 	margin: 20px 5px 0 5px !important;
 	font-size: 15px;
 }
-#popUpDiv form input.close {
+#popUpDiv form a.close {
 	padding: 16px 0;
 	border: 0;
 	cursor: pointer;
 	color: #fff;
+	background: #ccc;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
 }
 #popUpDiv form div.money {
 	width: 31%;
@@ -1235,6 +1250,9 @@ table {
 	}
 	ul.tabs div li {
 		z-index: 0;
+	}
+	#cd-nav ul li img {
+		margin-right: 5px;
 	}
 }
 @media only screen and (max-width: 639px) {
