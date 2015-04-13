@@ -325,6 +325,44 @@ div.home_main a.more:hover {
 	color: #F76C02;
 	text-decoration: none;
 }
+div#explanation {
+	width: 100%;
+	background: #fff;
+	border-top: 2px solid #F76C02; 
+	border-bottom: 2px solid #F76C02; 
+	margin: 0 0 30px 0;
+}
+div#explanation ul {
+	max-width: 1000px;
+	width: 100%;
+	margin: 15px auto;
+	font-size: 14px;
+	line-height: 25px;
+}
+div#explanation ul li {
+	padding: 10px;
+	width: calc(33% - 10px);
+	float: left;
+	background: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin: 0 5px;
+}
+div#explanation ul li b {
+	display: block;
+	line-height: 40px;
+	font-size: 18px;
+}
+div#explanation ul li i {
+	float: left;
+	color: #eee;
+}
+div#explanation ul li span {
+	float: right;
+	width: calc(100% - 90px);
+	padding-right: 5px;
+}
 /* 任務列表 */
 div.main_list {
 	text-align: center;
@@ -1139,7 +1177,7 @@ table {
 .zebra tr td.right {
 	text-align: right;
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1450px) {
 	div#homephoto {
 		height: 750px;
 	}
@@ -1321,6 +1359,18 @@ table {
 	#popUpDiv form h4 {
 		display: block;
 		float: none;
+	}
+	div#explanation ul li {
+		width: 100%;
+	}
+	div#explanation ul li b {
+		font-size: 15px;
+	}
+	div#explanation ul {
+		font-size: 11px;
+	}
+	div#explanation ul li span {
+		width: calc(100% - 70px);
 	}
 }
 @media only screen and (max-width: 480px) {
