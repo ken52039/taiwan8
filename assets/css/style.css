@@ -244,7 +244,7 @@ div.home_btn a {
 }
 div.home_btn a.left {
 	float: left;
-	background: #F76C02;
+	background: #aaa;
 }
 div.home_btn a.right {
 	float: right;
@@ -255,6 +255,7 @@ div.home_btn a:hover {
 	filter:alpha(opacity=100);
 	-moz-opacity:1.0;
 	opacity:1.0;
+	background: #F76C02;
 }
 /* Footer */
 footer {
@@ -395,11 +396,11 @@ div.main_list div span.tag {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	padding: 2px;
-	width: calc(33% - 5px);
+	width: calc(33% - 4px);
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space : nowrap;
-	margin-right: 5px;
+	margin: 0 2px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -410,8 +411,10 @@ div.main_list div span.date {
 	padding-left: 35px;
 	height: 40px;
 	display: inline-block;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	font-size: 14px;
+	text-align: center;
+	line-height: 15px;
 }
 div.main_list div span.time {
 	display: block;
@@ -419,9 +422,11 @@ div.main_list div span.time {
 	padding-left: 35px;
 	height: 40px;
 	display: inline-block;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	float: right;
 	font-size: 14px;
+	text-align: center;
+	line-height: 15px;
 }
 div.main_list div b.detail {
 	margin: 0 -15px 10px -15px;
@@ -447,6 +452,11 @@ div.main_list div span.people {
 	width: 185px;
 	margin-bottom: 10px;
 }
+div.main_list div span.people a {
+	float: left;
+	width: calc(50% - 1px);
+	border-right: 1px solid #eee;
+}
 div.main_list div span.people a span {
 	width: 90px;
 	overflow: hidden;
@@ -454,7 +464,6 @@ div.main_list div span.people a span {
   	white-space: nowrap;	
   	display: inline-block;
   	padding: 0 5px;
-  	border-right: 1px solid #eee;
   	font-size: 12px;
 }
 div.main_list div span.people a span.no {
@@ -467,10 +476,8 @@ div.main_list div span.people a span.red {
 	color: #F76C02;
 }
 div.main_list div span.people b {
-	width: calc(50% - 1px);
 	display: inline-block;
 	font-size: 13px;
-	border-right: 1px solid #eee;
 	line-height: 25px;
 	color: #aaa;
 }
@@ -479,7 +486,10 @@ div.main_list div span.people b i {
 	color: #555;
 	font-size: 15px;
 }
-div.main_list div span.people b.no {
+div.main_list div span.people b:hover i {
+	color: #F76C02;
+}
+div.main_list div span.people a.no {
 	border-right: 0;
 }
 div.main_list div span.btn {
@@ -741,6 +751,9 @@ div#detail div.detail_content div.right div.member span.people {
 	width: 180px;
 	margin-bottom: 10px;
 }
+div#detail div.detail_content div.right div.member span.people a.id:hover {
+	text-decoration: none;
+}
 div#detail div.detail_content div.right div.member span.people a span {
   	display: block;
   	padding: 0 5px;
@@ -762,11 +775,22 @@ div#detail div.detail_content div.right div.member span.people span.ok {
 div#detail div.detail_content div.right div.member span.people span.no {
 	color: #F76C02;
 }
-div#detail div.detail_content div.right div.member span.people b {
+div#detail div.detail_content div.right div.member span.people a.half {
 	width: calc(50% - 1px);
-	display: inline-block;
-	font-size: 13px;
+	float: left;
 	border-right: 1px solid #eee;
+}
+div#detail div.detail_content div.right div.member span.people a.half:hover {
+	text-decoration: none;
+}
+div#detail div.detail_content div.right div.member span.people a.half:hover i {
+	color: #F76C02;
+}
+div#detail div.detail_content div.right div.member span.people a.no {
+	border: 0;
+}
+div#detail div.detail_content div.right div.member span.people b {
+	font-size: 13px;
 	line-height: 25px;
 	color: #aaa;
 }
@@ -826,15 +850,6 @@ div#detail div.breadcrumb i {
 div#detail div.breadcrumb a {
 	padding: 0 5px;
 	border-right: 1px solid #ccc;
-}
-div#detail div.detail_content div.left form.signup {
-	padding: 0px;
-}
-div#detail div.detail_content div.left form.signup div.cd-filter-block {
-	margin-bottom: 0;
-}
-div#detail div.detail_content div.left form.signup div.cd-filter-content {
-	line-height: 40px;
 }
 /* 發布任務popup */
 #blanket {
@@ -1123,6 +1138,11 @@ table {
 }
 .zebra tr td.right {
 	text-align: right;
+}
+@media only screen and (min-width: 1440px) {
+	div#homephoto {
+		height: 750px;
+	}
 }
 @media only screen and (min-width: 1170px) {
 	.cd-tab-filter.left,
