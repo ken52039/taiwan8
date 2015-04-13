@@ -67,7 +67,7 @@ div#homephoto {
 	left: 0;
 	width: 100%;
 	text-align: center;
-	z-index: 2;
+	z-index: 1;
 }
 .owl-theme .owl-controls .owl-page span {
 	background: #fff;
@@ -177,8 +177,7 @@ div#cd-main-nav ul li span a:hover {
 	border-radius: 50%;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
-	margin-right: 10px;
-	margin-top: 4px;
+	margin: 4px 0 0 10px;
 	border: 1px solid #eee;
 }
 #cd-nav ul.nosubmenu {
@@ -602,6 +601,9 @@ form.signup .cd-filter-content {
 .cd-user-modal-container .cd-switcher li:last-child a {
 	font-size: 15px;
 }
+.cd-filter-block .list {
+	margin-top: 10px;
+}
 /* 任務詳細頁 ＆ 個人資料頁 */
 div#detail div.detail_content {
 	max-width: 1000px;
@@ -704,6 +706,14 @@ div#detail div.detail_content div.left div.white p span {
 	display: inline-block;
 	margin-bottom: 10px;
 	margin-left: 0.5rem;
+}
+div#detail div.detail_content div.left div.white p span img {
+	float: right;
+	width: 45%;
+	border-radius: 5px;
+  	-moz-border-radius: 5px;
+  	-webkit-border-radius: 5px;
+  	margin: 10px 0 10px 10px;
 }
 div#detail div.detail_content div.left div.white p iframe {
 	width: 100%;
@@ -818,6 +828,70 @@ div#detail div.detail_content div.left form.signup div.cd-filter-block {
 }
 div#detail div.detail_content div.left form.signup div.cd-filter-content {
 	line-height: 40px;
+}
+/* 發布任務popup */
+#blanket {
+	background-color: rgba(52, 54, 66, 0.9);
+	position: absolute;
+	z-index: 9001;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+#popUpDiv {
+	position: absolute;
+	background: #fff;
+	width: 600px;
+	height: auto;
+	z-index: 9002;
+	top: 0px !important;
+	left: calc(50% - 300px) !important;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#popUpDiv center {
+	font-size: 20px;
+	margin: 20px 0 10px 0;
+	color: #505260;
+}
+#popUpDiv form div.cd-filter-content {
+	position: relative;
+}
+#popUpDiv form div.cd-filter-content button {
+	height: 30px;
+	font-size: 13px;
+	background: #fff;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+#popUpDiv form div.cd-filter-content i {
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	color: #777;
+}
+#popUpDiv form div.cd-filter-content input[type=file] {
+	border: 0;
+	padding: 9px 0;
+	outline: 0;
+	width: 100%;
+	cursor: pointer;
+}
+#popUpDiv form input.okgo,
+#popUpDiv form input.close {
+	width: calc(50% - 12px) !important;
+	margin: 20px 5px 0 5px !important;
+	font-size: 15px;
+}
+#popUpDiv form input.close {
+	padding: 16px 0;
+	border: 0;
+	cursor: pointer;
+	color: #fff;
+}
+#popUpDiv form div.money {
+	width: 31%;
 }
 /* 靜態文稿頁 */
 .row .col {
@@ -1095,6 +1169,9 @@ table {
 		text-align: left;
 		width: calc(100% - 20px);
 	}
+	div#cd-nav div#cd-main-nav ul li {
+		width: 100% !important;
+	}
 	div#cd-nav div#cd-main-nav ul li a {
 		padding: 15px;
 		border-right: 0px;
@@ -1192,6 +1269,20 @@ table {
 	div#detail div.detail_content div.left,
 	div#detail div.detail_content div.right {
 		width: 100%;
+	}
+	div#detail div.detail_content div.left div.white p span img {
+		width: 100%;
+	}
+	#popUpDiv {
+		width: 100%;
+		left: 0px !important;
+	}
+	#popUpDiv form div.money {
+		width: 48%;
+	}
+	#popUpDiv form h4 {
+		display: block;
+		float: none;
 	}
 }
 @media only screen and (max-width: 480px) {

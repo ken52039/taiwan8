@@ -432,7 +432,7 @@ xcustom form elements
   top: 50%;
   width: 16px;
   height: 16px;
-  background: url("../img/cd-icon-arrow.svg") no-repeat center center;
+  background: url("../img/cd-icon-arrow.png") no-repeat center center;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);

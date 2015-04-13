@@ -157,7 +157,7 @@
 		<ul>
 			<li style="width: 127px;"><img src="http://goo.gl/C4jOQg" class="photo"> <a href="#0">會員管理 <i class="fa fa-external-link"></i></a>
 			</li>
-			<li><a href="#0">發布任務</a></li>
+			<li><a href="javascript:" onclick="popup('popUpDiv')">發布任務</a></li>
 			<li><a href="#0">登出</a></li>
 			<li><a href="list.html">任務一覽 <i class="fa fa-angle-down"></i></a>
 				<span>
@@ -318,12 +318,10 @@
 						</div>
 						<br clear="both">
 					</div>
-					<br>
 					<p class="fieldset">
 						<input type="checkbox" id="remember-me">
 						<label for="remember-me">我同意 <a href="#">服務條款/注意事項/免責聲明</a></label>
 					</p>
-					<br>
 					<p class="fieldset">
 						<input class="full-width" type="submit" value="註冊">
 					</p>
@@ -355,6 +353,132 @@
 			<a href="#0" class="cd-close-form">Close</a>
 		</div> <!-- cd-user-modal-container -->
 	</div> <!-- cd-user-modal -->
+	
+	<div id="blanket" style="display:none;"></div>
+	<div id="popUpDiv" style="display:none;">
+		<center>發佈任務</center>
+				<form class="cd-form signup">
+					<div class="cd-filter-block">
+						<h4><label for="job_1">主類別</label></h4>	
+						<div class="cd-filter-content cd-select">					
+							<select class="filter" name="selectThis" id="selectThis" id="job_1">
+								<option value="">個人幫手</option>
+								<option value="">臨時人力</option>
+								<option value="">專業幫手</option>
+								<option value="">私人群組</option>
+							</select>
+						</div>
+						<br clear="both">
+					</div>
+					<div class="cd-filter-block">
+						<h4><label for="job_2">次類別</label></h4>	
+						<div class="cd-filter-content cd-select">					
+							<select class="filter" name="selectThis" id="selectThis" id="job_2">
+								<option value="">個人幫手</option>
+								<option value="">臨時人力</option>
+								<option value="">專業幫手</option>
+								<option value="">私人群組</option>
+							</select>
+						</div>
+						<br clear="both">
+					</div>
+					<div class="cd-filter-block">
+						<h4><label for="job_3">任務標題</label></h4>						
+						<div class="cd-filter-content">
+							<input type="text" placeholder="" id="job_3">
+							<span class="cd-error-message">標題未填or格式錯誤</span>
+						</div>
+						<br clear="both">
+					</div>
+					<div class="cd-filter-block">
+						<h4><label for="job_4">上傳照片</label></h4>						
+						<div class="cd-filter-content">
+							<input type="file" id="job_4">
+							<i class="fa fa-upload"></i>
+						</div>
+						<br clear="both">
+					</div>
+					<div class="cd-filter-block">
+						<h4><label for="job_5">任務開始時間</label></h4>						
+						<div class="cd-filter-content">
+							<input type="text" placeholder="ex:2015-04-13 09:52" id="job_5">
+							<span class="cd-error-message">時間未填or格式錯誤</span>
+							<i class="fa fa-calendar"></i>
+						</div>
+						<br clear="both">
+					</div>
+					<div class="cd-filter-block">
+						<h4><label for="job_6">任務結束時間</label></h4>						
+						<div class="cd-filter-content">
+							<input type="text" placeholder="ex:2015-04-13 09:52" id="job_6">
+							<span class="cd-error-message">時間未填or格式錯誤</span>
+							<i class="fa fa-calendar"></i>
+						</div>
+						<br clear="both">
+					</div>
+					<div class="cd-filter-block">
+						<h4><label for="job_7">需求人數</label></h4>						
+						<div class="cd-filter-content">
+							<input type="number" placeholder="" id="job_7">
+							<span class="cd-error-message">人數未填or格式錯誤</span>
+						</div>
+						<br clear="both">
+					</div>
+					<div class="cd-filter-block">
+						<h4><label for="job_8">任務地點</label></h4>						
+						<div class="cd-filter-content">
+							<input type="text" placeholder="請輸入完整地址" id="job_8">
+							<span class="cd-error-message">地點未填or格式錯誤</span>
+						</div>
+						<br clear="both">
+					</div>
+					<div class="cd-filter-block">
+						<h4><label for="job_9">出發地(選填)</label></h4>						
+						<div class="cd-filter-content">
+							<input type="text" placeholder="若無，可不填" id="job_9">
+							<span class="cd-error-message">出發地格式錯誤</span>
+						</div>
+						<br clear="both">
+					</div>
+					<div class="cd-filter-block">
+						<h4><label for="job_10">設定報酬</label></h4>	
+						<div class="cd-filter-content money">
+							<input type="number" placeholder="" id="job_10">
+							<span class="cd-error-message">金額未填or格式錯誤</span>
+						</div>
+						<div class="cd-filter-content cd-select money" style="margin-right:10px;">					
+							<select class="filter" name="selectThis" id="selectThis">
+								<option value="">時薪</option>
+								<option value="">日薪</option>
+								<option value="">總金額</option>
+								<option value="">其他</option>
+							</select>
+						</div>
+						<br clear="both">
+					</div>
+					<div class="cd-filter-block">
+						<h4><label for="job_11">聯絡人(選填)</label></h4>						
+						<div class="cd-filter-content">
+							<input type="text" placeholder="Ken Huang" id="job_11">
+							<span class="cd-error-message">格式錯誤</span>
+						</div>
+						<br clear="both">
+					</div>
+					<div class="cd-filter-block">
+						<h4><label for="job_11">聯絡電話(選填)</label></h4>						
+						<div class="cd-filter-content">
+							<input type="number" placeholder="0921987197" id="job_11">
+							<span class="cd-error-message">格式錯誤</span>
+						</div>
+						<br clear="both">
+					</div>
+					<p class="fieldset">
+						<input class="full-width close" type="button" value="取消" onclick="popup('popUpDiv')">
+						<input class="full-width okgo" type="submit" value="確定送出">
+					</p>
+				</form>
+	</div>	
+
 </body>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.min.js"></script>
@@ -385,4 +509,5 @@ $(document).ready(function() {
 });
 </script>
 <script src="assets/js/login.js"></script>
+<script src="assets/js/css-pop.js"></script>
 </html>
