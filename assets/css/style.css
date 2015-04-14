@@ -1288,7 +1288,7 @@ table {
 	height: 100px;
 	padding: 10px;
 }
-.zebra tr td i {
+.zebra tr td i.fa-calendar {
 	color: #aaa;
 	position: absolute;
 	right: 20px;
