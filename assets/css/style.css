@@ -964,7 +964,7 @@ div#detail div.breadcrumb a {
 	position: fixed;
 	background: #fff;
 	width: 600px;
-	height: 100%;
+	max-height: 100%;
 	overflow: scroll;
 	z-index: 9002;
 	top: 0px !important;
@@ -977,6 +977,7 @@ div#detail div.breadcrumb a {
 	font-size: 20px;
 	margin: 20px 0 10px 0;
 	color: #505260;
+	padding: 0 10px;
 }
 .popUpDiv center a {
 	font-size: 15px;
@@ -1172,6 +1173,7 @@ table {
     padding: 10px;
     border-bottom: 1px solid #f2f2f2;
     vertical-align: top;
+    position: relative;
 }
 
 .zebra tbody tr:nth-child(even) {
@@ -1261,6 +1263,71 @@ table {
 }
 .zebra tr td a.otherphoto img:hover {
 	border-color: #F76C02;
+}
+.zebra tr td input,
+.zebra tr td select,
+.zebra tr td textarea {
+	width: 100%;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	height: 30px;
+	border: 2px solid #eee;
+  	background-color: #fff;
+	outline: none;
+	padding: 0 10px;
+	font-size: 13px;
+}
+.zebra tr td input:focus,
+.zebra tr td select:focus,
+.zebra tr td textarea:focus {
+	border: 2px solid #F76C02;
+	background: #fff;
+}
+.zebra tr td textarea {
+	height: 100px;
+	padding: 10px;
+}
+.zebra tr td i {
+	color: #aaa;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+.zebra tr td label {
+	line-height: 35px;
+	float: left;
+	cursor: pointer;
+	margin-right: 10px;
+}
+.zebra tr td label input[type=radio] {
+	width: auto;
+	float: left;
+	margin-right: 5px;
+}
+.zebra tr td input[type=file] {
+	padding-top: 5px;
+  	cursor: pointer;
+  	margin-bottom: 10px;
+}
+button.table_btn {
+	width: 200px;
+  	margin: 0px auto;
+  	padding: 15px;
+  	background: #aaa;
+  	color: #fff;
+  	font-size: 15px;
+  	display: block;
+  	margin-top: 20px;
+  	text-align: center;
+  	border-radius: 5px;
+  	-moz-border-radius: 5px;
+  	-webkit-border-radius: 5px;
+  	border: 0;
+  	cursor: pointer;
+}
+button.table_btn:hover {
+	background: #F76C02;
 }
 /* 發布任務 */
 div#release {
