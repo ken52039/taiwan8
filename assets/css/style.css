@@ -353,6 +353,7 @@ div#explanation ul li b {
 	display: block;
 	line-height: 40px;
 	font-size: 18px;
+	color: #aaa;
 }
 div#explanation ul li i {
 	float: left;
@@ -360,8 +361,9 @@ div#explanation ul li i {
 }
 div#explanation ul li span {
 	float: right;
-	width: calc(100% - 90px);
+	width: calc(100% - 70px);
 	padding-right: 5px;
+	color: #333;
 }
 /* 任務列表 */
 div.main_list {
@@ -449,7 +451,7 @@ div.main_list div span.date {
 	padding-left: 35px;
 	height: 40px;
 	display: inline-block;
-	margin: 10px 0;
+	margin: 10px 0 10px 0;
 	font-size: 14px;
 	text-align: center;
 	line-height: 13px;
@@ -460,7 +462,7 @@ div.main_list div span.time {
 	padding-left: 35px;
 	height: 40px;
 	display: inline-block;
-	margin: 10px 0;
+	margin: 10px 10px 10px 0;
 	float: right;
 	font-size: 14px;
 	text-align: center;
@@ -651,6 +653,9 @@ form.signup .cd-filter-content {
 }
 .cd-filter-block .list {
 	margin-top: 10px;
+}
+.cd-form input[type=submit] {
+	font-size: 15px;
 }
 /* 任務詳細頁 ＆ 個人資料頁 */
 div#detail div.detail_content {
@@ -1204,6 +1209,222 @@ table {
 .zebra tr td a.otherphoto img:hover {
 	border-color: #F76C02;
 }
+/* 發布任務 */
+div#release {
+	max-width: 800px;
+	width: 100%;
+	margin: 20px auto 40px auto;
+	position: relative;
+	z-index: 99;
+}
+div#release ul.accordionPart {
+	margin: 10px auto;
+}
+div#release ul.accordionPart li {
+	width: 100%;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin-bottom: 20px;
+	background: #fff;
+}
+div#release ul.accordionPart li .qa_title {
+	cursor: pointer;
+	color: #aaa;
+	font-size: 15px;
+	padding: 20px;
+}
+div#release ul.accordionPart li .qa_title i {
+	float: right;
+	display: none;
+}
+div#release ul.accordionPart li .qa_title.ok i.fa-check {
+	display: block;
+	color: green;
+}
+div#release ul.accordionPart li .qa_title_on i.fa-check {
+	display: none !important;
+}
+div#release ul.accordionPart li .qa_title_on i.fa-pencil {
+	display: block !important;
+}
+div#release ul.accordionPart li .qa_content {
+	padding: 20px;
+	color: #555;
+	padding-top: 0;
+	display: none;
+}
+div#release ul.accordionPart li .qa_content ul.tabs {
+	width: 100%;
+	margin: 0px;
+	box-shadow: none;
+	height: auto;
+}
+div#release ul.accordionPart li .qa_content ul.tabs li.tab {
+	width: calc(25% - 1px) !important;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	height: auto;
+}
+div#release ul.accordionPart li .qa_content ul.tabs li.tab a {
+	height: auto;
+	font-size: 15px;
+}
+div#release ul.accordionPart li .qa_content ul.tabs li.tab a i {
+	width: 64px;
+	height: 64px;
+	display: block;
+	margin: 0px auto;
+}
+div#release ul.accordionPart li .qa_content ul.tabs li.tab a.icon1 i {
+	background: url('../img/icon_tab1.png') 0px 0px no-repeat;
+}
+div#release ul.accordionPart li .qa_content ul.tabs li.tab a.icon2 i {
+	background: url('../img/icon_tab2.png') 0px 0px no-repeat;
+}
+div#release ul.accordionPart li .qa_content ul.tabs li.tab a.icon3 i {
+	background: url('../img/icon_tab3.png') 0px 0px no-repeat;
+}
+div#release ul.accordionPart li .qa_content ul.tabs li.tab a.icon4 i {
+	background: url('../img/icon_tab4.png') 0px 0px no-repeat;
+}
+div#release ul.accordionPart li .qa_content ul.tabs li.tab a.icon1:hover i,
+div#release ul.accordionPart li .qa_content ul.tabs li.tab a.icon1.active i {
+	background: url('../img/icon_tab1.png') 0px -64px no-repeat;
+}
+div#release ul.accordionPart li .qa_content ul.tabs li.tab a.icon2:hover i,
+div#release ul.accordionPart li .qa_content ul.tabs li.tab a.icon2.active i {
+	background: url('../img/icon_tab2.png') 0px -64px no-repeat;
+}
+div#release ul.accordionPart li .qa_content ul.tabs li.tab a.icon3:hover i,
+div#release ul.accordionPart li .qa_content ul.tabs li.tab a.icon3.active i {
+	background: url('../img/icon_tab3.png') 0px -64px no-repeat;
+}
+div#release ul.accordionPart li .qa_content ul.tabs li.tab a.icon4:hover i,
+div#release ul.accordionPart li .qa_content ul.tabs li.tab a.icon4.active i {
+	background: url('../img/icon_tab4.png') 0px -64px no-repeat;
+}
+div#release ul.accordionPart li .qa_content button.btn {
+	width: 200px;
+	margin: 0px auto;
+	padding: 15px;
+	background: #aaa;
+	color: #fff;
+	font-size: 15px;
+	display: block;
+	margin-top: 20px;
+	text-align: center;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 0;
+	cursor: pointer;
+}
+div#release ul.accordionPart li .qa_content button.btn:hover {
+	text-decoration: none;
+	background: #F76C02;
+}
+div#release ul.accordionPart li .qa_content div.content div {
+	display: inline-block;
+	width: 49%;
+	position: relative;
+	font-size: 15px;
+}
+div#release ul.accordionPart li .qa_content div.content div label {
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	float: right;
+	padding: 10px 10px 10px 35px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	line-height: 30px;
+}
+div#release ul.accordionPart li .qa_content div.content div input[type=radio] {
+	position: absolute;
+	top: 15px;
+	left: 10px;
+}
+div#release ul.accordionPart li .qa_content div.content div input[type=radio]:checked + label {
+	background: #eee;
+}
+div#release ul.accordionPart li .qa_content div.content div label input[type=text] {
+	width: calc(100% - 50px);
+	float: right;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	height: 30px;
+	border: 1px solid #ccc;
+	outline: none;
+	padding: 0 10px;
+	display: none;
+	font-size: 13px;
+}
+div#release ul.accordionPart li .qa_content div.content div input[type=radio]:checked + label input[type=text] {
+	display: block;
+}
+div#release ul.accordionPart li .qa_content label.default {
+	width: calc(67% - 3px);
+	display: inline-block;
+	line-height: 40px;
+	font-size: 15px;
+	margin-bottom: 20px;
+	position: relative;
+	vertical-align: top;
+}
+div#release ul.accordionPart li .qa_content label.small {
+	width: calc(33% - 3px);
+}
+div#release ul.accordionPart li .qa_content label.all {
+	width: calc(100% - 3px);
+}
+div#release ul.accordionPart li .qa_content label.default input,
+div#release ul.accordionPart li .qa_content label.default textarea,
+div#release ul.accordionPart li .qa_content label.default select {
+	width: calc(100% - 80px);
+	float: right;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	height: 40px;
+	border-color: transparent;
+  	background-color: #e6e6e6;
+	outline: none;
+	padding: 0 10px;
+	margin-right: 10px;
+	font-size: 13px;
+}
+div#release ul.accordionPart li .qa_content label.default textarea {
+	padding: 10px;
+	height: 200px;
+	margin-bottom: 20px;
+}
+div#release ul.accordionPart li .qa_content label.default input:focus {
+	border: 2px solid #F76C02;
+	background: #fff;
+}
+div#release ul.accordionPart li .qa_content label.default i {
+	position: absolute;
+	right: 20px;
+	top: 12px;
+	color: #aaa;
+}
+div#release ul.accordionPart li .qa_content label.default iframe {
+	width: 100%;
+	display: none;
+	margin-top: 20px;
+}
+div#release ul.accordionPart li .qa_content label.default input:focus ~ iframe {
+	display: block;
+}
+div#release ul.accordionPart li .qa_content label.default input[type=file] {
+	padding-top: 10px;
+	cursor: pointer;
+}
+/* 大尺寸螢幕 */
 @media only screen and (min-width: 1450px) {
 	div#homephoto {
 		height: 750px;
@@ -1392,12 +1613,17 @@ table {
 	}
 	div#explanation ul li b {
 		font-size: 15px;
+		line-height: 25px;
 	}
 	div#explanation ul {
 		font-size: 11px;
 	}
 	div#explanation ul li span {
 		width: calc(100% - 70px);
+	}
+	div#release ul.accordionPart li .qa_content label.default {
+		width: calc(100% - 3px);
+		display: block;
 	}
 }
 @media only screen and (max-width: 480px) {
@@ -1446,5 +1672,14 @@ table {
 	}
 	nav > ul.cd-pagination {
 		display: none;
+	}
+	div#release ul.accordionPart li .qa_content ul.tabs li.tab a {
+		font-size: 13px;
+	}
+	div#release ul.accordionPart li .qa_content ul.tabs li.tab a i {
+		display: none;
+	}
+	div#release ul.accordionPart li .qa_content div.content div {
+		width: 100%;
 	}
 }
