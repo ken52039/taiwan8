@@ -775,6 +775,59 @@ div#detail div.detail_content div.left div.white p span img {
   	-webkit-border-radius: 5px;
   	margin: 10px 0 10px 10px;
 }
+div#detail div.detail_content div.left div.white p.post b {
+	margin-bottom: 20px;
+}
+div#detail div.detail_content div.left div.white p.post span {
+	width: calc(100% - 70px);
+	float: right;
+	font-size: 13px;
+	margin-bottom: 20px;
+}
+div#detail div.detail_content div.left div.white p.post b img {
+	float: left;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+  	-moz-border-radius: 50%;
+  	-webkit-border-radius: 50%;
+}
+div#detail div.detail_content div.left div.white p.post span textarea {
+	width: 100%;
+	border-radius: 5px;
+  	-moz-border-radius: 5px;
+  	-webkit-border-radius: 5px;
+  	height: 100px;
+  	border-color: transparent;
+  	background-color: #e6e6e6;
+  	outline: none;
+  	padding: 10px;
+  	font-size: 13px;
+  	float: right;
+}
+div#detail div.detail_content div.left div.white p.post span textarea:focus {
+	border: 2px solid #F76C02;
+	background: #fff;
+}
+div#detail div.detail_content div.left div.white p.post button {
+	width: 200px;
+  	margin: 0px auto;
+  	padding: 15px;
+  	background: #aaa;
+  	color: #fff;
+  	font-size: 15px;
+  	display: block;
+  	margin-top: 20px;
+  	text-align: center;
+  	border-radius: 5px;
+  	-moz-border-radius: 5px;
+  	-webkit-border-radius: 5px;
+  	border: 0;
+  	cursor: pointer;
+}
+div#detail div.detail_content div.left div.white p.post button:hover {
+	background: #F76C02;
+}
 div#detail div.detail_content div.left div.white p iframe {
 	width: 100%;
 	height: 200px;
@@ -907,7 +960,7 @@ div#detail div.breadcrumb a {
 	left: 0px;
 	width: 100%;
 }
-#popUpDiv {
+.popUpDiv {
 	position: fixed;
 	background: #fff;
 	width: 600px;
@@ -920,46 +973,46 @@ div#detail div.breadcrumb a {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
-#popUpDiv center {
+.popUpDiv center {
 	font-size: 20px;
 	margin: 20px 0 10px 0;
 	color: #505260;
 }
-#popUpDiv center a {
+.popUpDiv center a {
 	font-size: 15px;
 	display: block;
 	margin-top: 10px;
 }
-#popUpDiv form div.cd-filter-content {
+.popUpDiv form div.cd-filter-content {
 	position: relative;
 }
-#popUpDiv form div.cd-filter-content button {
+.popUpDiv form div.cd-filter-content button {
 	height: 30px;
 	font-size: 13px;
 	background: #fff;
 	border: 1px solid #ccc;
 	cursor: pointer;
 }
-#popUpDiv form div.cd-filter-content i {
+.popUpDiv form div.cd-filter-content i {
 	position: absolute;
 	right: 15px;
 	top: 10px;
 	color: #777;
 }
-#popUpDiv form div.cd-filter-content input[type=file] {
+.popUpDiv form div.cd-filter-content input[type=file] {
 	border: 0;
 	padding: 9px 0;
 	outline: 0;
 	width: 100%;
 	cursor: pointer;
 }
-#popUpDiv form input.okgo,
-#popUpDiv form a.close {
+.popUpDiv form input.okgo,
+.popUpDiv form a.close {
 	width: calc(50% - 12px) !important;
 	margin: 20px 5px 0 5px !important;
 	font-size: 15px;
 }
-#popUpDiv form a.close {
+.popUpDiv form a.close {
 	padding: 16px 0;
 	border: 0;
 	cursor: pointer;
@@ -973,7 +1026,7 @@ div#detail div.breadcrumb a {
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 }
-#popUpDiv form div.money {
+.popUpDiv form div.money {
 	width: 31%;
 }
 /* 靜態文稿頁 */
@@ -1402,7 +1455,9 @@ div#release ul.accordionPart li .qa_content label.default textarea {
 	height: 200px;
 	margin-bottom: 20px;
 }
-div#release ul.accordionPart li .qa_content label.default input:focus {
+div#release ul.accordionPart li .qa_content label.default input:focus,
+div#release ul.accordionPart li .qa_content label.default textarea:focus,
+div#release ul.accordionPart li .qa_content label.default select:focus {
 	border: 2px solid #F76C02;
 	background: #fff;
 }
@@ -1560,6 +1615,9 @@ div#release ul.accordionPart li .qa_content label.default input[type=file] {
 	#cd-nav ul li img {
 		margin-right: 5px;
 	}
+	div#release {
+		z-index: 0;
+	}
 }
 @media only screen and (max-width: 639px) {
 	footer {
@@ -1597,14 +1655,14 @@ div#release ul.accordionPart li .qa_content label.default input[type=file] {
 	div#detail div.detail_content div.left div.white p span img {
 		width: 100%;
 	}
-	#popUpDiv {
+	.popUpDiv {
 		width: 100%;
 		left: 0px !important;
 	}
-	#popUpDiv form div.money {
+	.popUpDiv form div.money {
 		width: 48%;
 	}
-	#popUpDiv form h4 {
+	.popUpDiv form h4 {
 		display: block;
 		float: none;
 	}

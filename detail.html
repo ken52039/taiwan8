@@ -119,8 +119,29 @@
 					<b>截止時間：</b><span>徵滿為止</span>
 					<br clear="both">
 				</p>
-				<a href="#" class="btn btn_"><i class="fa fa-exclamation"></i> 檢舉</a>
+				<a href="javascript:" class="btn btn_" onclick="popup('popUpDiv_')"><i class="fa fa-exclamation"></i> 檢舉</a>
 				<br clear="both">
+				<br clear="both">
+				<form>
+					<p class="post">
+						<title>留言</title>
+						<b><img src="http://goo.gl/C4jOQg"></b>
+						<span>你好，這是個很棒的任務也！你好，這是個很棒的任務也！你好，這是個很棒的任務也！你好，這是個很棒的任務也！你好，這是個很棒的任務也！你好，這是個很棒的任務也！你好，這是個很棒的任務也！你好，這是個很棒的任務也！你好，這是個很棒的任務也！你好，這是個很棒的任務也！</span>
+						<br clear="both">
+						<b><img src="http://goo.gl/C4jOQg"></b>
+						<span>你好，這是個很棒的任務也！</span>
+						<br clear="both">
+						<b><img src="http://goo.gl/C4jOQg"></b>
+						<span>Good</span>
+						<br clear="both">
+						<b><img src="http://goo.gl/C4jOQg"></b>
+						<span>
+								<textarea id="member_detail" placeholder="留下留言"></textarea>
+						</span>
+						<br clear="both">
+						<button>送出留言</button>
+					</p>
+				</form>
 			</div>
 		</div>
 		<div class="right">
@@ -350,7 +371,7 @@
 
 
 	<div id="blanket" style="display:none;"></div>
-	<div id="popUpDiv" style="display:none;">
+	<div id="popUpDiv" style="display:none;" class="popUpDiv">
 		<center>發送履歷<a href="detail.html">[台中/長短期人力]知名外商倉儲公司徵倉儲/行政工讀生</a></center>
 				<form class="cd-form signup">
 					<div class="cd-filter-block">
@@ -410,6 +431,29 @@
 					<p class="fieldset">
 						<a class="close" href="javascript:" onclick="popup('popUpDiv')">取消</a>
 						<input class="full-width okgo" type="submit" value="立即發送">
+					</p>
+				</form>
+	</div>	
+	<div id="popUpDiv_" style="display:none;" class="popUpDiv">
+		<center>檢舉<a href="detail.html">[台中/長短期人力]知名外商倉儲公司徵倉儲/行政工讀生</a></center>
+				<form class="cd-form signup">
+					<div class="cd-filter-block">
+						<h4>請選擇理由</h4>	
+						<ul class="cd-filter-content cd-filters list">
+							<li style="display:inline-block; margin-right: 10px;">
+								<input class="filter" type="radio" id="report_1" name="radio" checked>
+				    			<label class="radio-label" for="report_1">這不是一個正常的任務，這不是一個正常的任務</label>
+							</li>
+							<li style="display:inline-block; margin-right: 10px;">
+								<input class="filter" type="radio" id="report_2" name="radio">
+				    			<label class="radio-label" for="report_2">這內含一些不雅或歧視的字眼</label>
+							</li>
+						</ul>
+						<br clear="both">
+					</div>
+					<p class="fieldset">
+						<a class="close" href="javascript:" onclick="popup('popUpDiv_')">取消</a>
+						<input class="full-width okgo" type="submit" value="立即檢舉">
 					</p>
 				</form>
 	</div>	
