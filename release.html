@@ -1,237 +1,255 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>台灣幫，幫您找幫手</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
-<meta name="Robots" content="index,follow">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-<link rel="shortcut icon" href="https://taiwan8.com.tw/favicon.ico">
-<link href="//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
-<link href="assets/css/nav.css" rel="stylesheet">
-<link href="assets/css/style.css" rel="stylesheet">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-<!--[if IE]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<!--[if lt IE 9 ]>
-<div style="background: #000;opacity: 0.5;filter: alpha(opacity=50);position:fixed;top:0px;left:0px; width:100%;height:100%;z-index:1000000000000000000000000;"></div>
-<div style="line-height:25px;text-align:center;width:100%;background-color:#eee;padding: 20px 0;position:fixed;top:40%;left:0px;z-index:1000000000000000000000001;">
-親愛的使用者，很抱歉您目前使用的是舊版的 [ IE 網路瀏覽器 ]，建議使用更快、更好用的瀏覽器！<br><b style="font-size:15px;">如：<a href="https://www.google.com/intl/zh-TW/chrome/browser/?hl=zh-TW&brand=CHMB&utm_campaign=zh-TW&utm_source=zh-TW-ha-apac-tw-sk&utm_medium=ha" target="_blank" style="color:#b20000;">Google瀏覽器</a>、<a href="http://moztw.org/firefox/" target="_blank" style="color:#b20000;">Firefox</a> 或 升級為 <a href="http://windows.microsoft.com/zh-tw/internet-explorer/downloads/ie-9/worldwide-languages" target="_blank" style="color:#b20000;">IE 9.0</a> 以上。</b><br>若在更換瀏覽器過程中遇到任何問題，歡迎來信 <a href="mailto:service@taiwan8.com.tw" style="color:#b20000;">service@taiwan8.com.tw</a> ，我們會儘速為您處理。</div>
-<![endif]-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>台灣幫，幫您找幫手</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="Robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="https://taiwan8.com.tw/favicon.ico">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
+    <link href="assets/css/nav.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Include Required Prerequisites -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/2.9.0/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3.3.2/css/bootstrap.css" />
+
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/1/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/1/daterangepicker-bs3.css" />
+
+    <!--[if lt IE 9 ]>
+    <div style="background: #000;opacity: 0.5;filter: alpha(opacity=50);position:fixed;top:0px;left:0px; width:100%;height:100%;z-index:1000000000000000000000000;"></div>
+    <div style="line-height:25px;text-align:center;width:100%;background-color:#eee;padding: 20px 0;position:fixed;top:40%;left:0px;z-index:1000000000000000000000001;">
+        親愛的使用者，很抱歉您目前使用的是舊版的 [ IE 網路瀏覽器 ]，建議使用更快、更好用的瀏覽器！<br><b style="font-size:15px;">如：<a href="https://www.google.com/intl/zh-TW/chrome/browser/?hl=zh-TW&brand=CHMB&utm_campaign=zh-TW&utm_source=zh-TW-ha-apac-tw-sk&utm_medium=ha" target="_blank" style="color:#b20000;">Google瀏覽器</a>、<a href="http://moztw.org/firefox/" target="_blank" style="color:#b20000;">Firefox</a> 或 升級為 <a href="http://windows.microsoft.com/zh-tw/internet-explorer/downloads/ie-9/worldwide-languages" target="_blank" style="color:#b20000;">IE 9.0</a> 以上。</b><br>若在更換瀏覽器過程中遇到任何問題，歡迎來信 <a href="mailto:service@taiwan8.com.tw" style="color:#b20000;">service@taiwan8.com.tw</a> ，我們會儘速為您處理。</div>
+    <![endif]-->
 </head>
 <body>
 <header class="main">
-	<a href="index.html">台灣幫</a>
+    <a href="index.html">台灣幫</a>
 </header>
 <div id="release">
-	<div id="new_title">發布任務</div>
-	<ul>
-		<form>
-			<li class="step">
-				<div class="main ok">Step1. 選擇類別 <i class="fa fa-check"></i><i class="fa fa-pencil"></i></div>
-				<div class="main" style="display: block;" id="step1">
-				      <ul class="tabs">
-					        <li class="tab"><a href="#1" class="icon1"><i></i>個人幫手</a></li>
-					        <li class="tab"><a href="#2" class="icon2"><i></i>臨時人力</a></li>
-					        <li class="tab"><a href="#3" class="icon3"><i></i>專業幫手</a></li>
-					        <li class="tab"><a href="#4" class="icon4"><i></i>私人群組</a></li>
-					        <br clear="both">
-				      </ul>
-				    <div id="1" class="content">
-						<div><input type="radio" id="radio_1" name="radio1" checked=""><label for="radio_1">代買代送</label></div>
-						<div><input type="radio" id="radio_2" name="radio1"><label for="radio_2">排隊</label></div>
-						<div><input type="radio" id="radio_3" name="radio1"><label for="radio_3">掛號</label></div>
-						<div><input type="radio" id="radio_4" name="radio1"><label for="radio_4">個人助手</label></div>
-						<div><input type="radio" id="radio_5" name="radio1"><label for="radio_5">家事服務</label></div>
-						<div><input type="radio" id="radio_6" name="radio1"><label for="radio_6">自訂<input type="text" placeholder="請輸入自訂的類別"></label></div>
-				    </div>
-				    <div id="2" class="content">
-						<div><input type="radio" id="radio_7" name="radio2" checked=""><label for="radio_7">活動工作</label></div>
-						<div><input type="radio" id="radio_8" name="radio2"><label for="radio_8">餐飲服務</label></div>
-						<div><input type="radio" id="radio_9" name="radio2"><label for="radio_9">市調座談</label></div>
-						<div><input type="radio" id="radio_10" name="radio2"><label for="radio_10">工廠工地</label></div>
-						<div><input type="radio" id="radio_11" name="radio2"><label for="radio_11">銷售|賣場</label></div>
-						<div><input type="radio" id="radio_12" name="radio2"><label for="radio_12">清潔工作</label></div>
-						<div><input type="radio" id="radio_13" name="radio2"><label for="radio_13">演藝|模特</label></div>
-						<div><input type="radio" id="radio_14" name="radio2"><label for="radio_14">自訂<input type="text" placeholder="請輸入自訂的類別"></label></div>
-				    </div>
-				    <div id="3" class="content">
-						<div><input type="radio" id="radio_15" name="radio3" checked=""><label for="radio_15">語言翻譯</label></div>
-						<div><input type="radio" id="radio_16" name="radio3"><label for="radio_16">美工設計</label></div>
-						<div><input type="radio" id="radio_17" name="radio3"><label for="radio_17">電腦維護</label></div>
-						<div><input type="radio" id="radio_18" name="radio3"><label for="radio_18">會計諮詢</label></div>
-						<div><input type="radio" id="radio_19" name="radio3"><label for="radio_19">法律事務</label></div>
-						<div><input type="radio" id="radio_20" name="radio3"><label for="radio_20">專業攝影</label></div>
-						<div><input type="radio" id="radio_21" name="radio3"><label for="radio_21">自訂<input type="text" placeholder="請輸入自訂的類別"></label></div>
-				    </div>
-				    <div id="4" class="content">
-						<div><input type="radio" id="radio_22" name="radio4" checked=""><label for="radio_22">公司任務</label></div>
-						<div><input type="radio" id="radio_23" name="radio4"><label for="radio_23">學校社團</label></div>
-						<div><input type="radio" id="radio_24" name="radio4"><label for="radio_24">私人組織</label></div>
-				    </div>
-				    <button type="button" href="javascript:" class="btn" onclick="setVisibility('step2', 'block');setVisibility('step1', 'none');document.getElementById('title').focus();">下一步</button>
-				</div>
-			</li>
-			<li class="step">
-				<div class="main">Step2. 任務詳情 <i class="fa fa-check"></i><i class="fa fa-pencil"></i></div>
-				<div class="main" id="step2">
-					<label for="title" class="default">
-						任務標題 <input type="text" id="title" placeholder="範例：台灣幫急徵春秋資訊會展工讀生">
-					</label>
-					<label for="people" class="default small">
-						需求人數 <input type="number" id="people" value="1">
-					</label>
-					<label for="address" class="default">
-						任務地址 <input type="text" id="address" placeholder="請輸入完整地址">
-						<i class="fa fa-map-marker"></i>
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231391.76253771465!2d121.50637795!3d25.0172264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac72bce20a99%3A0x3f6a35cedd0ac2e0!2z6Ie65YyX!5e0!3m2!1szh-TW!2stw!4v1428980154700" height="200" frameborder="0" style="border:0"></iframe>
-					</label>
-					<label for="floor" class="default small">
-						樓層 <input type="number" id="floor" value="1">
-					</label>
-					<label for="address_" class="default">
-						目的地 <input type="text" id="address_" placeholder="請輸入完整地址">
-						<i class="fa fa-map-marker"></i>
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231391.76253771465!2d121.50637795!3d25.0172264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac72bce20a99%3A0x3f6a35cedd0ac2e0!2z6Ie65YyX!5e0!3m2!1szh-TW!2stw!4v1428980154700" height="200" frameborder="0" style="border:0"></iframe>
-					</label>
-					<label for="floor_" class="default small">
-						樓層 <input type="number" id="floor_" value="1">
-					</label>
-					<label for="date" class="default">
-						日期區間 <input type="text" id="date" value="2015.01.01 ~ 2015.04.14">
-						<i class="fa fa-calendar"></i>
-					</label>
-					<label for="time" class="default small">
-						時間區間 <input type="text" id="time" value="07:00 ~ 18:00">
-						<i class="fa fa-clock-o"></i>
-					</label>
-					<button type="button" href="javascript:" class="btn" onclick="setVisibility('step3', 'block');setVisibility('step2', 'none');document.getElementById('type').focus();">下一步</button>
-				</div>
-			</li>
-			<li class="step">
-				<div class="main">Step3. 任務薪資福利 <i class="fa fa-check"></i><i class="fa fa-pencil"></i></div>
-				<div class="main" id="step3">
-					<label class="default small">
-						薪資類型
-						<select name="" id="type">
-							<option value="">日薪</option>
-							<option value="">月薪</option>
-							<option value="">總金額</option>
-						</select>
-					</label>
-					<label class="default" for="money">
-						金額 <input type="number" id="money" value="200">
-					</label>
-					<label class="default all" for="money_detail">
-						薪資備註 <textarea id="money_detail" placeholder="範例：活動結束直接領取，需攜身份証。薪資發放日為次月15日"></textarea>
-					</label>
-					<button type="button" href="javascript:" class="btn" onclick="setVisibility('step4', 'block');setVisibility('step3', 'none');document.getElementById('member_name').focus();">下一步</button>
-				</div>
-			</li>
-			<li class="step">
-				<div class="main">Step4. 其他 <i class="fa fa-check"></i><i class="fa fa-pencil"></i></div>
-				<div class="main" id="step4">
-					<label class="default small" for="member_name">
-						聯絡人 <input type="text" id="member_name" value="黃愷修">
-					</label>
-					<label class="default small" for="member_tel">
-						聯絡電話 <input type="tel" id="member_tel" value="0921987197">
-					</label>
-					<label class="default small" for="member_mail">
-						E-MAIL <input type="text" id="member_mail" value="ken52039@gmail.com">
-					</label>
-					<label class="default small" for="money_file">
-						選擇照片 <input type="file" id="money_file">
-					</label>
-					<label class="default" for="member_detail">
-						詳細說明 <textarea id="member_detail" placeholder=""></textarea>
-					</label>
-					<button href="javascript:" class="btn">確認送出</button>
-				</div>
-			</li>
-		</form>
-	</ul>
+    <div id="new_title">發布任務</div>
+    <ul>
+        <form>
+            <li class="step">
+                <div class="main ok">Step1. 選擇類別 <i class="fa fa-check"></i><i class="fa fa-pencil"></i></div>
+                <div class="main" style="display: block;" id="step1">
+                    <ul class="tabs">
+                        <li class="tab"><a href="#1" class="icon1"><i></i>個人幫手</a></li>
+                        <li class="tab"><a href="#2" class="icon2"><i></i>臨時人力</a></li>
+                        <li class="tab"><a href="#3" class="icon3"><i></i>專業幫手</a></li>
+                        <li class="tab"><a href="#4" class="icon4"><i></i>私人群組</a></li>
+                        <br clear="both">
+                    </ul>
+                    <div id="1" class="content">
+                        <div><input type="radio" id="radio_1" name="radio1" checked=""><label for="radio_1">代買代送</label></div>
+                        <div><input type="radio" id="radio_2" name="radio1"><label for="radio_2">排隊</label></div>
+                        <div><input type="radio" id="radio_3" name="radio1"><label for="radio_3">掛號</label></div>
+                        <div><input type="radio" id="radio_4" name="radio1"><label for="radio_4">個人助手</label></div>
+                        <div><input type="radio" id="radio_5" name="radio1"><label for="radio_5">家事服務</label></div>
+                        <div><input type="radio" id="radio_6" name="radio1"><label for="radio_6">自訂<input type="text" placeholder="請輸入自訂的類別"></label></div>
+                    </div>
+                    <div id="2" class="content">
+                        <div><input type="radio" id="radio_7" name="radio2" checked=""><label for="radio_7">活動工作</label></div>
+                        <div><input type="radio" id="radio_8" name="radio2"><label for="radio_8">餐飲服務</label></div>
+                        <div><input type="radio" id="radio_9" name="radio2"><label for="radio_9">市調座談</label></div>
+                        <div><input type="radio" id="radio_10" name="radio2"><label for="radio_10">工廠工地</label></div>
+                        <div><input type="radio" id="radio_11" name="radio2"><label for="radio_11">銷售|賣場</label></div>
+                        <div><input type="radio" id="radio_12" name="radio2"><label for="radio_12">清潔工作</label></div>
+                        <div><input type="radio" id="radio_13" name="radio2"><label for="radio_13">演藝|模特</label></div>
+                        <div><input type="radio" id="radio_14" name="radio2"><label for="radio_14">自訂<input type="text" placeholder="請輸入自訂的類別"></label></div>
+                    </div>
+                    <div id="3" class="content">
+                        <div><input type="radio" id="radio_15" name="radio3" checked=""><label for="radio_15">語言翻譯</label></div>
+                        <div><input type="radio" id="radio_16" name="radio3"><label for="radio_16">美工設計</label></div>
+                        <div><input type="radio" id="radio_17" name="radio3"><label for="radio_17">電腦維護</label></div>
+                        <div><input type="radio" id="radio_18" name="radio3"><label for="radio_18">會計諮詢</label></div>
+                        <div><input type="radio" id="radio_19" name="radio3"><label for="radio_19">法律事務</label></div>
+                        <div><input type="radio" id="radio_20" name="radio3"><label for="radio_20">專業攝影</label></div>
+                        <div><input type="radio" id="radio_21" name="radio3"><label for="radio_21">自訂<input type="text" placeholder="請輸入自訂的類別"></label></div>
+                    </div>
+                    <div id="4" class="content">
+                        <div><input type="radio" id="radio_22" name="radio4" checked=""><label for="radio_22">公司任務</label></div>
+                        <div><input type="radio" id="radio_23" name="radio4"><label for="radio_23">學校社團</label></div>
+                        <div><input type="radio" id="radio_24" name="radio4"><label for="radio_24">私人組織</label></div>
+                    </div>
+                    <button type="button" href="javascript:" class="btn" onclick="setVisibility('step2', 'block');setVisibility('step1', 'none');document.getElementById('title').focus();">下一步</button>
+                </div>
+            </li>
+            <li class="step">
+                <div class="main">Step2. 任務詳情 <i class="fa fa-check"></i><i class="fa fa-pencil"></i></div>
+                <div class="main" id="step2">
+                    <label for="title" class="default">
+                        任務標題 <input type="text" id="title" placeholder="範例：台灣幫急徵春秋資訊會展工讀生">
+                    </label>
+                    <label for="people" class="default small">
+                        需求人數 <input type="number" id="people" value="1">
+                    </label>
+                    <label for="address" class="default">
+                        任務地址 <input type="text" id="address" placeholder="請輸入完整地址">
+                        <i class="fa fa-map-marker"></i>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231391.76253771465!2d121.50637795!3d25.0172264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac72bce20a99%3A0x3f6a35cedd0ac2e0!2z6Ie65YyX!5e0!3m2!1szh-TW!2stw!4v1428980154700" height="200" frameborder="0" style="border:0"></iframe>
+                    </label>
+                    <label for="floor" class="default small">
+                        樓層 <input type="number" id="floor" value="1">
+                    </label>
+                    <label for="address_" class="default">
+                        目的地 <input type="text" id="address_" placeholder="請輸入完整地址">
+                        <i class="fa fa-map-marker"></i>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231391.76253771465!2d121.50637795!3d25.0172264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac72bce20a99%3A0x3f6a35cedd0ac2e0!2z6Ie65YyX!5e0!3m2!1szh-TW!2stw!4v1428980154700" height="200" frameborder="0" style="border:0"></iframe>
+                    </label>
+                    <label for="floor_" class="default small">
+                        樓層 <input type="number" id="floor_" value="1">
+                    </label>
+                    <label for="date" class="default">
+                        日期區間 <input type="text" id="date" name="daterange"  value="2015.01.01 ~ 2015.04.14">
+                        <i class="fa fa-calendar"></i>
+                    </label>
+                    <label for="time" class="default small">
+                        時間區間 <input type="text" id="time" value="07:00 ~ 18:00">
+                        <i class="fa fa-clock-o"></i>
+                    </label>
+                    <button type="button" href="javascript:" class="btn" onclick="setVisibility('step3', 'block');setVisibility('step2', 'none');document.getElementById('type').focus();">下一步</button>
+                </div>
+            </li>
+            <li class="step">
+                <div class="main">Step3. 任務薪資福利 <i class="fa fa-check"></i><i class="fa fa-pencil"></i></div>
+                <div class="main" id="step3">
+                    <label class="default small">
+                        薪資類型
+                        <select name="" id="type">
+                            <option value="">日薪</option>
+                            <option value="">月薪</option>
+                            <option value="">總金額</option>
+                        </select>
+                    </label>
+                    <label class="default" for="money">
+                        金額 <input type="number" id="money" value="200">
+                    </label>
+                    <label class="default all" for="money_detail">
+                        薪資備註 <textarea id="money_detail" placeholder="範例：活動結束直接領取，需攜身份証。薪資發放日為次月15日"></textarea>
+                    </label>
+                    <button type="button" href="javascript:" class="btn" onclick="setVisibility('step4', 'block');setVisibility('step3', 'none');document.getElementById('member_name').focus();">下一步</button>
+                </div>
+            </li>
+            <li class="step">
+                <div class="main">Step4. 其他 <i class="fa fa-check"></i><i class="fa fa-pencil"></i></div>
+                <div class="main" id="step4">
+                    <label class="default small" for="member_name">
+                        聯絡人 <input type="text" id="member_name" value="黃愷修">
+                    </label>
+                    <label class="default small" for="member_tel">
+                        聯絡電話 <input type="tel" id="member_tel" value="0921987197">
+                    </label>
+                    <label class="default small" for="member_mail">
+                        E-MAIL <input type="text" id="member_mail" value="ken52039@gmail.com">
+                    </label>
+                    <label class="default small" for="money_file">
+                        選擇照片 <input type="file" id="money_file">
+                    </label>
+                    <label class="default" for="member_detail">
+                        詳細說明 <textarea id="member_detail" placeholder=""></textarea>
+                    </label>
+                    <button href="javascript:" class="btn">確認送出</button>
+                </div>
+            </li>
+        </form>
+    </ul>
 </div>
 <div id="cd-nav">
-	<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
-	<div id="cd-main-nav">
-		<ul>
-			<li style="width: 127px;"><img src="http://goo.gl/C4jOQg" class="photo"> <a href="#0">會員管理 <i class="fa fa-external-link"></i></a>
-			</li>
-			<li><a href="#0">登出</a></li>
-			<li><a href="list.html">任務一覽 <i class="fa fa-angle-down"></i></a>
+    <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+    <div id="cd-main-nav">
+        <ul>
+            <li style="width: 127px;"><img src="http://goo.gl/C4jOQg" class="photo"> <a href="#0">會員管理 <i class="fa fa-external-link"></i></a>
+            </li>
+            <li><a href="#0">登出</a></li>
+            <li><a href="list.html">任務一覽 <i class="fa fa-angle-down"></i></a>
 				<span>
 					<a href="#">個人幫手</a>
 					<a href="#">臨時人力</a>
 					<a href="#">專業幫手</a>
 					<a href="#" class="no">私人群組</a>
 				</span>
-			</li>
-			<li class="no"><a href="#0">了解服務</a></li>
-		</ul>
-	</div>
+            </li>
+            <li class="no"><a href="#0">了解服務</a></li>
+        </ul>
+    </div>
 </div>
 <footer>
-	<ul>
-		<li class="word">© 2015 台灣幫 ALL Rights Reserved.</li>
-		<li><a href="static.html#1">常見問題</a></li>
-		<li><a href="static.html#2">優惠活動</a></li>
-		<li><a href="static.html#3">關於我們</a></li>
-		<li><a href="static.html#4">隱私條款</a></li>
-	</ul>
+    <ul>
+        <li class="word">© 2015 台灣幫 ALL Rights Reserved.</li>
+        <li><a href="static.html#1">常見問題</a></li>
+        <li><a href="static.html#2">優惠活動</a></li>
+        <li><a href="static.html#3">關於我們</a></li>
+        <li><a href="static.html#4">隱私條款</a></li>
+    </ul>
 	<span>
 		<a href="#"><img src="assets/img/fb-icon.png"></a>
 		<a href="#"><img src="assets/img/ios-icon.png"></a>
 		<a href="#"><img src="assets/img/google-icon.png"></a>
 	</span>
-	<br clear="both">
+    <br clear="both">
 </footer>
 </body>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
 <script src="assets/js/nav.js"></script>
 <script type="text/javascript">
-	$(function(){
-		// 幫 #release 的 ul 子元素加上 .accordionPart
-		// 接著再找出 li 中的第一個 div 子元素加上 .qa_title
-		// 並幫其加上 hover 及 click 事件
-		// 同時把兄弟元素加上 .qa_content 並隱藏起來
-		$('#release ul').addClass('accordionPart').find('li.step div.main:nth-child(1)').addClass('qa_title').hover(function(){
-			$(this).addClass('qa_title_on');
-		}, function(){
-			$(this).removeClass('qa_title_on');
-		}).click(function(){
-			// 當點到標題時，若答案是隱藏時則顯示它，同時隱藏其它已經展開的項目
-			// 反之則隱藏
-			var $qa_content = $(this).next('div.main.qa_content');
-			if(!$qa_content.is(':visible')){
-				$('#release ul li.step div.main.qa_content:visible').slideUp("fast");
-			}
-			$qa_content.slideToggle();
-		}).siblings().addClass('qa_content');
-	});
-$(document).ready(function(){
-    $('ul.tabs').tabs();
-  });
+    $(function(){
+        // 幫 #release 的 ul 子元素加上 .accordionPart
+        // 接著再找出 li 中的第一個 div 子元素加上 .qa_title
+        // 並幫其加上 hover 及 click 事件
+        // 同時把兄弟元素加上 .qa_content 並隱藏起來
+        $('#release ul').addClass('accordionPart').find('li.step div.main:nth-child(1)').addClass('qa_title').hover(function(){
+            $(this).addClass('qa_title_on');
+        }, function(){
+            $(this).removeClass('qa_title_on');
+        }).click(function(){
+            // 當點到標題時，若答案是隱藏時則顯示它，同時隱藏其它已經展開的項目
+            // 反之則隱藏
+            var $qa_content = $(this).next('div.main.qa_content');
+            if(!$qa_content.is(':visible')){
+                $('#release ul li.step div.main.qa_content:visible').slideUp("fast");
+            }
+            $qa_content.slideToggle();
+        }).siblings().addClass('qa_content');
+    });
+    $(document).ready(function(){
+        $('ul.tabs').tabs();
+    });
 </script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/Flowtype.js/1.1.0/flowtype.min.js"></script>
 <script type="text/javascript">
-$(document).ready(function() {
+    $(document).ready(function() {
 
-  $('#new_title').flowtype({
- 	minimum : 650,
- 	maximum : 1000,
-  });
+        $('#new_title').flowtype({
+            minimum : 650,
+            maximum : 1000,
+        });
 
-});
-$(".btn").click(function(){
-     $('html, body').animate({ scrollTop: 0 }, 'slow');
-})
-function setVisibility(id, visibility) {
-	document.getElementById(id).style.display = visibility;
-}
+        $('input[name="daterange"]').daterangepicker({
+            timePicker: true,
+            format: 'YYYY/MM/DD h:mm A',
+            timePickerIncrement: 30,
+            timePicker12Hour: true,
+            timePickerSeconds: false
+        });
+
+
+    });
+    $(".btn").click(function(){
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    })
+    function setVisibility(id, visibility) {
+        document.getElementById(id).style.display = visibility;
+    }
 </script>
 </html>
