@@ -27,7 +27,7 @@ div#header div.top {
 div#homephoto {
 	width: 100%;
 	z-index: 0;
-	height: 600px;
+	height: 500px;
 	overflow: hidden;
 }
 #owl-demo {
@@ -48,7 +48,7 @@ div#homephoto {
 	color: #fff;
 	position: absolute;
 	z-index: 1;
-	top: 25%;
+	top: 20%;
 	left: 0;
 	width: 100%;
 	text-align: center;
@@ -63,7 +63,7 @@ div#homephoto {
 }
 #owl-demo .owl-controls {
 	position: absolute;
-	top: 40%;
+	top: 30%;
 	left: 0;
 	width: 100%;
 	text-align: center;
@@ -225,7 +225,7 @@ header.main a {
 }
 div.home_btn {
 	width: 35%;
-	margin: 23% auto 0 auto;
+	margin: 17% auto 0 auto;
 	position: relative;
 	z-index: 1;
 }
@@ -328,9 +328,10 @@ div.home_main a.more:hover {
 div#explanation {
 	width: 100%;
 	background: #fff;
-	border-top: 2px solid #F76C02; 
-	border-bottom: 2px solid #F76C02; 
-	margin: 0 0 30px 0;
+	box-shadow: 1px 1px 5px #aaa;
+	-moz-box-shadow: 1px 1px 5px #aaa;
+	-webkit-box-shadow: 1px 1px 5px #aaa; 
+	margin: -15px 0 30px 0;
 }
 div#explanation ul {
 	max-width: 1000px;
@@ -666,6 +667,8 @@ div#detail div.detail_content {
 div#detail div.detail_content div.left {
 	width: calc(100% - 200px);
 	float: left;
+	position: relative;
+	z-index: 2;
 }
 div#detail div.detail_content div.right {
 	float: left;
@@ -834,29 +837,29 @@ div#detail div.detail_content div.left div.white p iframe {
 	height: 200px;
   	margin: 10px 0;
 }
-div#detail div.detail_content div.right div.member img {
+div.member img {
   	width: 150px;
   	height: 150px;
   	border-radius: 50%;
   	-moz-border-radius: 50%;
   	-webkit-border-radius: 50%;
   	display: block;
-  	margin: 0 auto 10px auto;
+  	margin: 10px auto;
 }
-div#detail div.detail_content div.right div.member span.people {
+div.member span.people {
 	text-align: center;
 	width: 180px;
-	margin-bottom: 10px;
+	margin: 10px auto;
 }
-div#detail div.detail_content div.right div.member span.people a.id:hover {
+div.member span.people a.id:hover {
 	text-decoration: none;
 }
-div#detail div.detail_content div.right div.member span.people a span {
+div.member span.people a span {
   	display: block;
   	padding: 0 5px;
   	font-size: 14px;
 }
-div#detail div.detail_content div.right div.member span.people span.ok {
+div.member span.people span.ok {
 	max-width: 150px;
 	display: block;
 	font-size: 14px;
@@ -869,38 +872,39 @@ div#detail div.detail_content div.right div.member span.people span.ok {
     -webkit-border-radius: 5px;
     color: green;
 }
-div#detail div.detail_content div.right div.member span.people span.no {
+div.member span.people span.no {
 	color: #F76C02;
 }
-div#detail div.detail_content div.right div.member span.people a.half {
+div.member span.people a.half {
 	width: calc(50% - 1px);
 	float: left;
 	border-right: 1px solid #eee;
 }
-div#detail div.detail_content div.right div.member span.people a.half:hover {
+div.member span.people a.half:hover {
 	text-decoration: none;
 }
-div#detail div.detail_content div.right div.member span.people a.half:hover i {
+div.member span.people a.half:hover i {
 	color: #F76C02;
 }
-div#detail div.detail_content div.right div.member span.people a.no {
+div.member span.people a.no {
 	border: 0;
 }
-div#detail div.detail_content div.right div.member span.people b {
+div.member span.people b {
 	font-size: 13px;
 	line-height: 25px;
 	color: #aaa;
 }
-div#detail div.detail_content div.right div.member span.people b i {
+div.member span.people b i {
 	display: block;
 	color: #555;
 	font-size: 15px;
 }
-div#detail div.detail_content div.right div.member span.people b.no {
+div.member span.people b.no {
 	border-right: 0;
 }
 div#detail div.detail_content div.right ul.link {
 	margin-top: 20px;
+	clear: both;
 }
 div#detail div.detail_content div.right ul.link li {
 	line-height: 30px;
@@ -1031,6 +1035,41 @@ div#detail div.breadcrumb a {
 .popUpDiv form div.money {
 	width: 31%;
 }
+div.helper div {
+	float: left;
+	width: 33%;
+}
+div.helper span div {
+	display: block;
+	text-align: center;
+	margin: 15px;
+	color: #fff;
+	background: #aaa;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	width: calc(100% - 30px);
+}
+div.helper div img {
+	width: 100px;
+	height: 100px;
+}
+div.helper span div label {
+	display: block;
+	cursor: pointer;
+	padding: 5px 0;
+}
+div.helper span div input[type=checkbox] {
+    display: none;
+}
+div.helper span div label:hover,
+div.helper span div input[type=checkbox]:checked ~ label {
+	background: #F76C02;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+div.helper span label 
 /* 靜態文稿頁 */
 .row .col {
 	padding: 0;
@@ -1162,13 +1201,48 @@ div.row.is-fixed {
 }
 /* 表格設計 */
 div#detail div.detail_content div.left div.white div.table {
-	overflow: scroll;
+	overflow: hidden;
+	text-align: center;
+}
+div#detail div.detail_content div.left div.white div.table ul li {
+	display: inline-block;
+	width: calc(50% - 10px);
+}
+div#detail div.detail_content div.left div.white div.table ul li a {
+	display: block;
+	padding: 3px 0;
+	background: #aaa;
+	color: #fff;
+	text-align: center;
+	margin: 0 5px 15px 5px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	font-size: 15px;
+}
+div#detail div.detail_content div.left div.white div.table ul li.active a,
+div#detail div.detail_content div.left div.white div.table ul li a:hover {
+	background: #F76C02;
+	text-decoration: none;
+}
+div#detail div.detail_content div.left div.white div.table ul li a span {
+	background: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: ;
+	color: #aaa;
+	float: right;
+	padding: 0 4px;
+	font-size: 12px;
+	margin-right: 10px;
+	line-height: 18px;
+	margin-top: 3px;
 }
 table {
 	width: 100%;
 	font-size: 14px;
 	color: #555;
-	min-width: 400px;
+	text-align: left;
 }
 .zebra td, .zebra th {
     padding: 10px;
@@ -1247,11 +1321,16 @@ table {
 	color: #F76C02;
 }
 .zebra tr td span.rate {
-	color: #aaa;
+	color: #fff;
 	font-size: 12px;
-}
-.zebra tr td.right {
-	text-align: right;
+	float: right;
+	padding: 0 4px;
+	text-align: center;
+	background: red;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin: 0 0 10px 10px;
 }
 .zebra tr td a.otherphoto img {
 	width: 100%;
@@ -1310,6 +1389,24 @@ table {
 	padding-top: 5px;
   	cursor: pointer;
   	margin-bottom: 10px;
+}
+.zebra tr td.btn {
+	text-align: center;
+	padding: 0px;
+}
+.zebra tr td.btn a {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 2px 4px;
+	margin: 0 5px;
+	font-size: 12px;
+}
+.zebra tr td.btn a:hover {
+	color: #fff;
+	background: #F76C02;
+	text-decoration: none;
 }
 button.table_btn {
 	width: 200px;
@@ -1448,9 +1545,10 @@ div#release ul.accordionPart li .qa_content button.btn:hover {
 }
 div#release ul.accordionPart li .qa_content div.content div {
 	display: inline-block;
-	width: 49%;
+	width: calc(33% - 1px);
 	position: relative;
 	font-size: 15px;
+	text-align: center;
 }
 div#release ul.accordionPart li .qa_content div.content div label {
 	cursor: pointer;
@@ -1550,16 +1648,117 @@ div#release ul.accordionPart li .qa_content label.default input[type=file] {
 .daterangepicker .calendar-date table {
 	min-width: 0;
 }
+ul.list li label {
+	cursor: pointer;
+}
+form.signup div.cd-filter-content textarea {
+	width: 100%;
+	border-radius: 5px;
+  	-moz-border-radius: 5px;
+  	-webkit-border-radius: 5px;
+  	height: 100px;
+  	border-color: transparent;
+  	background-color: #e6e6e6;
+  	outline: none;
+  	padding: 10px;
+  	font-size: 13px;
+}
+form.signup div.cd-filter-content textarea:focus {
+	border: 2px solid #F76C02;
+	background: #fff;
+}
+/* 服務介紹 */
+header.cd-header {
+	height: 130px;
+}
+header.cd-header a {
+	background: none;
+	text-indent: 0px;        
+}
+header.cd-header #cd-logo {
+	width: 151px;
+	height: 88px;
+	margin: 0px;
+	padding: 0px;
+}
+header.cd-header #cd-logo img {
+	width: 151px;
+	height: 88px;
+}
+.cd-product-intro .cd-triggers .btn.download {
+	width: 135px;
+	height: 40px;
+	text-align: center;
+	background: transparent;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	margin-bottom: -15px;
+}
+.cd-product-intro .cd-triggers .btn.download.fb {
+	background: url('../img/ios-icon.png') no-repeat;
+}
+.cd-product-intro .cd-triggers .btn.download.google {
+	background: url('../img/google-icon.png') no-repeat;
+	margin-right: 0px;
+}
+.cd-product-intro .cd-triggers .btn.salmon {
+	background: #F76C02;
+	color: #fff;
+	height: 40px;
+	line-height: 40px;
+	width: 130px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin-top: 20px;
+}
+.cd-product-intro .cd-triggers .btn.salmon:hover {
+	background: #fff;
+	color: #F76C02;
+	text-decoration: none;
+}
+.cd-product-intro .cd-triggers img.qrcode {
+	box-shadow: 1px 1px 5px #aaa;
+	-moz-box-shadow: 1px 1px 5px #aaa;
+	-webkit-box-shadow: 1px 1px 5px #aaa;
+	border: 1px solid #fff;
+	margin: 10px 5px 5px 5px;
+	width: 132px;
+}
+.cd-product-intro p {
+	color: #555;
+	text-indent: 5px;
+}
+.cd-header #cd-action {
+	margin: 20px 0 0 0 !important;
+}
+.cd-header .btn {
+	padding: 0;
+	height: auto !important;
+	line-height: 0px !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
 /* 大尺寸螢幕 */
 @media only screen and (min-width: 1450px) {
 	div#homephoto {
-		height: 750px;
+		height: 700px;
 	}
 }
 @media only screen and (min-width: 1170px) {
 	.cd-tab-filter.left,
 	.cd-tab-filter.right {
 		width: auto;
+	}
+}
+@media only screen and (max-width: 1069px)  {
+	.cd-product-intro .cd-triggers img.qrcode {
+		display: none;
+	}
+	.cd-image-wrapper img {
+		width: 100%;
 	}
 }
 /* RWD 行動裝置 */
@@ -1576,7 +1775,7 @@ div#release ul.accordionPart li .qa_content label.default input[type=file] {
 		text-align: center;
 	}
 	div.home_btn {
-		margin: 25% auto 0 auto;
+		margin: 23% auto 0 auto;
 	}
 	.row .col.content ul.cd-pricing-list li {
 		font-size: 12px;
@@ -1628,9 +1827,6 @@ div#release ul.accordionPart li .qa_content label.default input[type=file] {
 		box-shadow: 0px 0px 10px #aaa;
 		-moz-box-shadow: 0px 0px 10px #aaa;
 		-webkit-box-shadow: 0px 0px 10px #aaa;
-	}
-	#owl-demo .owl-item div span {
-		top: 20%;
 	}
 	#owl-demo .owl-controls {
 		top: 35%;
@@ -1686,8 +1882,11 @@ div#release ul.accordionPart li .qa_content label.default input[type=file] {
 	#cd-nav ul li img {
 		margin-right: 5px;
 	}
-	div#release {
+	div#release, div#detail div.detail_content div.left {
 		z-index: 0;
+	}
+	header.cd-header {
+		display: none;
 	}
 }
 @media only screen and (max-width: 639px) {
@@ -1754,6 +1953,24 @@ div#release ul.accordionPart li .qa_content label.default input[type=file] {
 		width: calc(100% - 3px);
 		display: block;
 	}
+	div#detail div.detail_content div.right div.member img {
+		float: left;
+		width: 130px;
+		height: 130px;
+	}
+	div#detail div.detail_content div.right div.member span.people {
+		float: right;
+		width: calc(100% - 150px);
+	}
+	div#detail div.detail_content h1 {
+		display: none;
+	}
+	div#detail div.detail_content h1.detail_title {
+		display: block;
+	}
+	div#detail div.detail_content {
+		margin-top: 15px;
+	}
 }
 @media only screen and (max-width: 480px) {
 	#owl-demo .owl-controls {
@@ -1810,5 +2027,13 @@ div#release ul.accordionPart li .qa_content label.default input[type=file] {
 	}
 	div#release ul.accordionPart li .qa_content div.content div {
 		width: 100%;
+	}
+	div.helper div {
+		float: none;
+		display: block;
+		width: 100%;
+	}
+	#owl-demo .owl-item div span {
+		top: 25%;
 	}
 }
