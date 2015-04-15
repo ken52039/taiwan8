@@ -1741,6 +1741,12 @@ header.cd-header #cd-logo img {
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 }
+.cd-phone-frame {
+	border-color: #000 !important;
+}
+.cd-slider-nav a {
+	background: #555 !important;
+}
 /* 大尺寸螢幕 */
 @media only screen and (min-width: 1450px) {
 	div#homephoto {
