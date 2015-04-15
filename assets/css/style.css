@@ -1747,6 +1747,12 @@ header.cd-header #cd-logo img {
 .cd-slider-nav a {
 	background: #555 !important;
 }
+div.backhome {
+	display: none;
+}
+.cd-caption p a {
+	color: #F76C02;
+}
 /* 大尺寸螢幕 */
 @media only screen and (min-width: 1450px) {
 	div#homephoto {
@@ -1765,6 +1771,13 @@ header.cd-header #cd-logo img {
 	}
 	.cd-image-wrapper img {
 		width: 100%;
+	}
+	.cd-single-item {
+		border-top: 1px solid #aaa !important;
+	}
+	div.backhome {
+		display: block;
+		border-top: 1px solid #aaa;
 	}
 }
 /* RWD 行動裝置 */
