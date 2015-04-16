@@ -41,6 +41,7 @@ div#homephoto {
 #owl-demo .owl-item div img {
   	display: block;
   	width: 100%;
+  	margin: 0px auto;
   	height: auto;
 }
 #owl-demo .owl-item div span {
@@ -48,7 +49,7 @@ div#homephoto {
 	color: #fff;
 	position: absolute;
 	z-index: 1;
-	top: 20%;
+	top: 150px;
 	left: 0;
 	width: 100%;
 	text-align: center;
@@ -63,7 +64,7 @@ div#homephoto {
 }
 #owl-demo .owl-controls {
 	position: absolute;
-	top: 30%;
+	top: 250px;
 	left: 0;
 	width: 100%;
 	text-align: center;
@@ -225,7 +226,7 @@ header.main a {
 }
 div.home_btn {
 	width: 35%;
-	margin: 17% auto 0 auto;
+	margin: 200px auto 0 auto;
 	position: relative;
 	z-index: 1;
 }
@@ -1666,6 +1667,7 @@ div#release ul.accordionPart li .qa_content label.default input:focus ~ iframe {
 div#release ul.accordionPart li .qa_content label.default input[type=file] {
 	padding-top: 10px;
 	cursor: pointer;
+	line-height: normal;
 }
 div#release ul.accordionPart li ul.step_show {
 	display: none;
@@ -1786,7 +1788,16 @@ div.backhome {
 /* 大尺寸螢幕 */
 @media only screen and (min-width: 1450px) {
 	div#homephoto {
-		height: 700px;
+		height: 600px;
+	}
+	#owl-demo .owl-item div span {
+		top: 180px;
+	}
+	#owl-demo .owl-controls {
+		top: 280px;
+	}
+	div.home_btn {
+		margin-top: 280px;
 	}
 }
 @media only screen and (min-width: 1170px) {
