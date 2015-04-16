@@ -16,7 +16,6 @@
 <link href="assets/css/page.css" rel="stylesheet">
 <link href="assets/css/login.css" rel="stylesheet">
 <link href="assets/css/style.css" rel="stylesheet">
-<link href="assets/css/colorbox.css" rel="stylesheet">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 <!--[if IE]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -49,109 +48,62 @@
 			<ul class="link">
 				<li><a href="control.html"><i class="fa fa-angle-right"></i> 我的驗證<span>5</span></a></li>
 				<li><a href="control1.html"><i class="fa fa-angle-right"></i> 任務紀錄<span>999</span></a></li>
-				<li class="active"><a href="control2.html"><i class="fa fa-angle-right"></i> 個人資料</a></li>
+				<li><a href="control2.html"><i class="fa fa-angle-right"></i> 個人資料</a></li>
 				<li><a href="control3.html"><i class="fa fa-angle-right"></i> 評價紀錄<span>999</span></a></li>
 				<li><a href="control4.html"><i class="fa fa-angle-right"></i> 付款設定<span>999</span></a></li>
-				<li><a href="control5.html"><i class="fa fa-angle-right"></i> 個人偏好設定</a></li>
+				<li class="active"><a href="control5.html"><i class="fa fa-angle-right"></i> 個人偏好設定</a></li>
 				<li><a href="control6.html"><i class="fa fa-angle-right"></i> 通訊錄</a></li>
 			</ul>
 		</div>
 		<div class="left">
-			<h1>會員管理 - 個人資料</h1>
+			<h1>會員管理 - 個人偏好設定</h1>
 			<div class="white">
 				<div class="table">
 					<form>
 					<table class="zebra">
 					    <tr>
 					        <td width="7%">・</td>        
-					        <td width="23%">暱稱</td>
-					        <td width="70%"><input type="text" value="Ken Huang"></td>
+					        <td width="23%">可接受距離</td>
+					        <td width="70%">
+					        	179km<input type="range"><br>
+					        	20km<span style="float:right;">360km</span>
+					        </td>
 					    </tr>        
 					    <tr>
 					        <td>・</td>        
-					        <td>手機號碼</td>
-					        <td><input type="text" value="0921987197"></td>
+					        <td>可接受任務時間</td>
+					        <td>
+					        	<label><input type="radio" value="" name="time">早上</label>
+					        	<label><input type="radio" value="" name="time">下午</label>
+					        	<label><input type="radio" value="" name="time">晚上</label>
+					        	<label><input type="radio" value="" name="time">凌晨</label>
+					        	<label><input type="radio" value="" name="time">不限</label>
+					        </td>
 					    </tr>
 					    <tr>
 					        <td>・</td>        
-					        <td>E-MAIL</td>
-					        <td><input type="text" value="ken52039@gmail.com"></td>
+					        <td>可接受任務類型</td>
+					        <td>
+					        	<label><input type="checkbox" value="">代買代送</label>
+					        	<label><input type="checkbox" value="">排隊/掛號</label>
+					        	<label><input type="checkbox" value="">個人助手</label>
+					        	<label><input type="checkbox" value="">家事服務</label>
+					        	<label><input type="checkbox" value="">不限</label>
+					        </td>
 					    </tr>  
 					    <tr>
 					        <td>・</td>        
-					        <td>生日</td>
-					        <td><input type="text" value="1987/07/16"><i class="fa fa-calendar"></i></td>
-					    </tr>
-					    <tr>
-					        <td>・</td>        
-					        <td>性別</td>
+					        <td>僅使用業主模式</td>
 					        <td>
-					        	<label><input type="radio" value="男" name="sex" checked>男<br clear="both"></label>
-					        	<label><input type="radio" name="sex" value="女">女<br clear="both"></label>
-					        </td>
-					    </tr>
-					     <tr>
-					        <td>・</td>        
-					        <td>真實姓名</td>
-					        <td><input type="text" value="黃愷修"></td>
-					    </tr>  
-					     <tr>
-					        <td>・</td>        
-					        <td>學歷</td>
-					        <td>
-								<select name="">
-									<option value="">大學</option>
-									<option value="">碩士</option>
-									<option value="">博士</option>
-								</select>
-					        </td>
-					    </tr>
-					    <tr>
-					        <td>・</td>        
-					        <td>工作經歷</td>
-					        <td><textarea placeholder="請輸入個人工作經歷"></textarea></td>
-					    </tr>
-					    <tr>
-					        <td>・</td>        
-					        <td>個人簡介</td>
-					        <td><textarea placeholder="請輸入個人簡介"></textarea></td>
-					    </tr>
-					    <tr>
-					        <td>・</td>        
-					        <td>上傳照片1</td>
-					        <td>
-					        	<input type="file" id="job_5">
-						        <a href="http://pic.eslite.com/Upload/Article/2012/1890/129882076200263842.jpg" class="otherphoto" rel="otherphoto"><img src="http://pic.eslite.com/Upload/Article/2012/1890/129882076200263842.jpg"></a>
-					        </td>
-					    </tr>
-					    <tr>
-					        <td>・</td>        
-					        <td>上傳照片2</td>
-					        <td>
-					        	<input type="file" id="job_5">
-						        <a href="http://okapi.books.com.tw/uploads/photo/photo6333.jpg" class="otherphoto" rel="otherphoto"><img src="http://okapi.books.com.tw/uploads/photo/photo6333.jpg"></a>
-					        </td>
-					    </tr>
-					    <tr>
-					        <td>・</td>        
-					        <td>上傳照片3</td>
-					        <td>
-					        	<input type="file" id="job_5">
-						        <a href="http://d2r4esoini6f0l.cloudfront.net/images/content/pictures/19338/content_womany_IMG_9502_kao_bei_1412659851-15367-2361.jpg" class="otherphoto" rel="otherphoto"><img src="http://d2r4esoini6f0l.cloudfront.net/images/content/pictures/19338/content_womany_IMG_9502_kao_bei_1412659851-15367-2361.jpg"></a>
-					        </td>
-					    </tr>
-					    <tr>
-					        <td>・</td>        
-					        <td>上傳照片4</td>
-					        <td>
-					        	<input type="file" id="job_5">
-						        <a href="http://www.mottimes.com/image/news/1420121203183330.JPG" class="otherphoto" rel="otherphoto"><img src="http://www.mottimes.com/image/news/1420121203183330.JPG"></a>
+					        	<label><input type="radio" value="" name="main" checked="">開啟</label>
+					        	<label><input type="radio" value="" name="main">關閉</label>
 					        </td>
 					    </tr>
 					</table>
 					<button class="table_btn">編輯修改</button>
 					</form>
 				</div>
+				<br>
 			</div>
 		</div>
 		<br clear="both">
@@ -366,13 +318,6 @@
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 <script type="text/javascript">stLight.options({publisher: "f80bf118-5519-452e-afae-3081e479af15", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.4.33/jquery.colorbox-min.js" type="text/javascript"></script>
-<script>
-	$(document).ready(function(){
-		//Examples of how to assign the Colorbox event to elements
-		$(".otherphoto").colorbox({rel:'otherphoto'});
-	});
-</script>
 <script src="assets/js/nav.js"></script>
 <script src="assets/js/login.js"></script>
 </html>

@@ -658,6 +658,24 @@ form.signup .cd-filter-content {
 .cd-form input[type=submit] {
 	font-size: 15px;
 }
+.cd-filter-block p {
+	font-size: 15px;
+	line-height: 25px;
+	text-align: center;
+}
+.cd-filter-block p a.share {
+	width: calc(33% - 1px);
+	display: inline-block;
+	line-height: 25px;
+	text-align: center;
+	margin-top: 20px;
+}
+.cd-filter-block p a.share i {
+	display: block;
+}
+.cd-filter-block p a.share:hover {
+	text-decoration: none;
+}
 /* 任務詳細頁 ＆ 個人資料頁 */
 div#detail div.detail_content {
 	max-width: 1000px;
@@ -1384,6 +1402,10 @@ table {
 	width: auto;
 	float: left;
 	margin-right: 5px;
+}
+.zebra tr td label input[type=checkbox]  {
+	width: auto;
+	height: auto;
 }
 .zebra tr td input[type=file] {
 	padding-top: 5px;
