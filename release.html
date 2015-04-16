@@ -39,7 +39,11 @@
     <ul>
         <form>
             <li class="step">
-                <div class="main ok">Step1. 選擇類別 <i class="fa fa-check"></i><i class="fa fa-pencil"></i></div>
+                <div class="main ok" onclick="setVisibility('step1_show', 'none');">Step1. 選擇類別 <i class="fa fa-check"></i><i class="fa fa-pencil"></i>
+                    <ul class="step_show" id="step1_show">
+                        <li>選擇類別：個人幫手-代買代送</li>
+                    </ul>
+                </div>
                 <div class="main" style="display: block;" id="step1">
                     <ul class="tabs">
                         <li class="tab"><a href="#1" class="icon1"><i></i>個人幫手</a></li>
@@ -79,11 +83,19 @@
                         <div><input type="radio" id="radio_23" name="radio4"><label for="radio_23">學校社團</label></div>
                         <div><input type="radio" id="radio_24" name="radio4"><label for="radio_24">私人組織</label></div>
                     </div>
-                    <button type="button" href="javascript:" class="btn" onclick="setVisibility('step2', 'block');setVisibility('step1', 'none');document.getElementById('title').focus();">下一步</button>
+                    <button type="button" href="javascript:" class="btn" onclick="setVisibility('step2', 'block');setVisibility('step1', 'none');document.getElementById('title').focus();setVisibility('step1_show', 'block');">下一步</button>
                 </div>
             </li>
             <li class="step">
-                <div class="main">Step2. 任務詳情 <i class="fa fa-check"></i><i class="fa fa-pencil"></i></div>
+                <div class="main" onclick="setVisibility('step2_show', 'none');">Step2. 任務詳情 <i class="fa fa-check"></i><i class="fa fa-pencil"></i>
+                    <ul class="step_show" id="step2_show">
+                        <li>任務標題：</li>
+                        <li>需求人數：</li>
+                        <li>任務地址：／樓層：</li>
+                        <li>目的地：／樓層：</li>
+                        <li>日期區間：／時間區間：</li>
+                    </ul>
+                </div>
                 <div class="main" id="step2">
                     <label for="title" class="default">
                         任務標題 <input type="text" id="title" placeholder="範例：台灣幫急徵春秋資訊會展工讀生">
@@ -115,11 +127,16 @@
                         時間區間 <input type="text" id="time" value="07:00 ~ 18:00">
                         <i class="fa fa-clock-o"></i>
                     </label>
-                    <button type="button" href="javascript:" class="btn" onclick="setVisibility('step3', 'block');setVisibility('step2', 'none');document.getElementById('type').focus();">下一步</button>
+                    <button type="button" href="javascript:" class="btn" onclick="setVisibility('step3', 'block');setVisibility('step2', 'none');document.getElementById('type').focus();setVisibility('step2_show', 'block');">下一步</button>
                 </div>
             </li>
             <li class="step">
-                <div class="main">Step3. 任務薪資福利 <i class="fa fa-check"></i><i class="fa fa-pencil"></i></div>
+                <div class="main" onclick="setVisibility('step3_show', 'none');">Step3. 任務薪資福利 <i class="fa fa-check"></i><i class="fa fa-pencil"></i>
+                    <ul class="step_show" id="step3_show">
+                        <li>日薪：100元</li>
+                        <li>薪資備註</li>
+                    </ul>
+                </div>
                 <div class="main" id="step3">
                     <label class="default small">
                         薪資類型
@@ -135,7 +152,7 @@
                     <label class="default all" for="money_detail">
                         薪資備註 <textarea id="money_detail" placeholder="範例：活動結束直接領取，需攜身份証。薪資發放日為次月15日"></textarea>
                     </label>
-                    <button type="button" href="javascript:" class="btn" onclick="setVisibility('step4', 'block');setVisibility('step3', 'none');document.getElementById('member_name').focus();">下一步</button>
+                    <button type="button" href="javascript:" class="btn" onclick="setVisibility('step4', 'block');setVisibility('step3', 'none');document.getElementById('member_name').focus();setVisibility('step3_show', 'block');">下一步</button>
                 </div>
             </li>
             <li class="step">

@@ -1667,6 +1667,14 @@ div#release ul.accordionPart li .qa_content label.default input[type=file] {
 	padding-top: 10px;
 	cursor: pointer;
 }
+div#release ul.accordionPart li ul.step_show {
+	display: none;
+	font-size: 13px;
+	margin: 10px 0 -20px 0;
+}
+div#release ul.accordionPart li ul.step_show li {
+	margin-bottom: 10px;
+}
 .daterangepicker .calendar-date table {
 	min-width: 0;
 }
