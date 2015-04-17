@@ -2097,3 +2097,16 @@ div.backhome {
 		top: 25%;
 	}
 }
+/* jquery上傳檔案 */
+button.delete-photo-btn {
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: transparent;
+}
+button.delete-photo-btn i {
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
