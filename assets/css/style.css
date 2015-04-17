@@ -2098,6 +2098,9 @@ div.backhome {
 	}
 }
 /* jquery上傳檔案 */
+div.progress {
+	margin-top: 20px;
+}
 button.delete-photo-btn {
 	border: 1px solid #ddd;
 	border-radius: 5px;
