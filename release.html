@@ -19,6 +19,7 @@
     <link rel="shortcut icon" href="https://taiwan8.com.tw/favicon.ico">
     <link href="//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
     <link href="assets/css/nav.css" rel="stylesheet">
+    <link href="assets/css/alert.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     <!--[if IE]>
@@ -120,11 +121,19 @@
                         樓層 <input type="number" id="floor_" value="1">
                     </label>
                     <label for="date" class="default">
-                        日期區間 <input type="text" id="date" name="daterange"  value="2015.01.01 ~ 2015.04.14">
+                        開始日期 <input type="text" id="date" name="daterange"  value="2015.01.01 ~ 2015.04.14">
                         <i class="fa fa-calendar"></i>
                     </label>
                     <label for="time" class="default small">
-                        時間區間 <input type="text" id="time" value="07:00 ~ 18:00">
+                        開始時間 <input type="text" id="time" value="07:00 ~ 18:00">
+                        <i class="fa fa-clock-o"></i>
+                    </label>
+                    <label for="date-end" class="default">
+                        結束日期 <input type="text" id="date-end" name="daterange"  value="2015.01.01 ~ 2015.04.14">
+                        <i class="fa fa-calendar"></i>
+                    </label>
+                    <label for="time-end" class="default small">
+                        結束時間 <input type="text" id="time-end" value="07:00 ~ 18:00">
                         <i class="fa fa-clock-o"></i>
                     </label>
                     <button type="button" href="javascript:" class="btn" onclick="setVisibility('step3', 'block');setVisibility('step2', 'none');document.getElementById('type').focus();setVisibility('step2_show', 'block');">下一步</button>
@@ -146,11 +155,11 @@
                             <option value="">總金額</option>
                         </select>
                     </label>
-                    <label class="default" for="money">
+                    <label class="default small" for="money">
                         金額 <input type="number" id="money" value="200">
                     </label>
-                    <label class="default all" for="money_detail">
-                        薪資備註 <textarea id="money_detail" placeholder="範例：活動結束直接領取，需攜身份証。薪資發放日為次月15日"></textarea>
+                    <label class="default small" for="money_detail">
+                        薪資備註 <input type="text" id="money_detail" value="">
                     </label>
                     <button type="button" href="javascript:" class="btn" onclick="setVisibility('step4', 'block');setVisibility('step3', 'none');document.getElementById('member_name').focus();setVisibility('step3_show', 'block');">下一步</button>
                 </div>
@@ -173,7 +182,20 @@
                     <label class="default" for="member_detail">
                         詳細說明 <textarea id="member_detail" placeholder=""></textarea>
                     </label>
-                    <button href="javascript:" class="btn">確認送出</button>
+                    <br clear="both">
+                    <button href="javascript:" class="btn btn_two" style="float:left;">儲存</button>
+                    <button href="javascript:" class="btn btn_two cd-popup-trigger" style="float:right;">確認送出</button>
+                    <br clear="both">
+                    <div class="cd-popup" role="alert">
+                        <div class="cd-popup-container">
+                            <p>本服務僅係提供平台供各會員使用，本公司並非任何會員之代理人，不涉入個會員間之任何法律關係，亦不就交易物件或服務內容之真偽、品質、交付或其他交易條件負任何擔保及賠償之責。如按下發布任務即同意台灣幫『<a href="static.html#4">使用者條款及隱私權條款政策</a>』。</p>
+                            <ul class="cd-buttons">
+                                <li><a href="#0">發布任務</a></li>
+                                <li><a href="javascript:" class="cd-popup-cancel">取消</a></li>
+                            </ul>
+                            <!-- <a href="#0" class="cd-popup-close img-replace">Close</a> -->
+                        </div> <!-- cd-popup-container -->
+                    </div> <!-- cd-popup -->
                 </div>
             </li>
         </form>
@@ -215,6 +237,7 @@
 </footer>
 </body>
 <script src="assets/js/nav.js"></script>
+<script src="assets/js/alert.js"></script>
 <script type="text/javascript">
     $(function(){
         // 幫 #release 的 ul 子元素加上 .accordionPart

@@ -81,7 +81,7 @@ div#cd-nav div#cd-main-nav ul {
 	right: 10px;
 	position: absolute;
 	text-align: right;
-	height: 200px;
+	height: 250px;
 }
 div#cd-nav div#cd-main-nav ul li a {
 	color: #fff;
@@ -225,13 +225,13 @@ header.main a {
 	background-size: 50%;
 }
 div.home_btn {
-	width: 35%;
+	width: 200px;
 	margin: 200px auto 0 auto;
 	position: relative;
 	z-index: 1;
 }
 div.home_btn a {
-	width: 45%;
+	width: 200px;
 	line-height: 70px;
 	color: #fff;
 	font-size: 25px;
@@ -242,21 +242,15 @@ div.home_btn a {
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-}
-div.home_btn a.left {
-	float: left;
-	background: #aaa;
-}
-div.home_btn a.right {
-	float: right;
-	background: #aaa;
+	display: block;
+	background: #F76C02;
 }
 div.home_btn a:hover {
 	text-decoration: none;
 	filter:alpha(opacity=100);
 	-moz-opacity:1.0;
 	opacity:1.0;
-	background: #F76C02;
+	background: #CE5A00;
 }
 /* Footer */
 footer {
@@ -342,7 +336,7 @@ div#explanation ul {
 	line-height: 25px;
 }
 div#explanation ul li {
-	padding: 10px;
+	padding: 50px 10px;
 	width: calc(33% - 10px);
 	float: left;
 	background: #fff;
@@ -352,20 +346,19 @@ div#explanation ul li {
 	margin: 0 5px;
 }
 div#explanation ul li b {
-	display: block;
-	line-height: 40px;
+	display: inline-block;
+	line-height: 50px;
 	font-size: 18px;
 	color: #aaa;
 }
 div#explanation ul li i {
 	float: left;
 	color: #eee;
+	margin-right: 10px;
 }
 div#explanation ul li span {
-	float: right;
-	width: calc(100% - 70px);
-	padding-right: 5px;
-	color: #333;
+	margin: 0px auto;
+	display: inline-block;
 }
 /* 任務列表 */
 div.main_list {
@@ -700,6 +693,23 @@ div#detail div.detail_content h1 {
 	padding: 0 10px;
 	line-height: 30px;
 }
+div#detail div.detail_content h1.detail_title span {
+	display: inline-block;
+	margin-left: 10px;
+	line-height: 30px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color: #fff;
+	font-size: 15px;
+	padding: 0 10px;
+}
+div#detail div.detail_content h1.detail_title span.green {
+	background: green;
+}
+div#detail div.detail_content h1.detail_title span.orange {
+	background: #F76C02;
+}
 div#detail div.detail_content div.tag {
 	font-size: 12px;
     color: #555;
@@ -744,7 +754,7 @@ div#detail div.detail_content div.left div.white a.btn {
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	margin-bottom: 20px;
+	margin-bottom: 5px;
 	margin-right: 10px;
 }
 div#detail div.detail_content div.left div.white a.btn:hover {
@@ -762,8 +772,23 @@ div#detail div.detail_content div.left div.white a.btn_ {
 div#detail div.detail_content div.left div.white div.share {
 	float: right;
 }
+div#detail div.detail_content div.left div.white div.share span.number {
+	border: 1px solid #ccc;
+  	border-radius: 5px;
+  	-moz-border-radius: 5px;
+  	-webkit-border-radius: 5px;
+  	padding: 2px 5px;
+  	margin: 5px 5px 15px 5px;
+  	font-size: 12px;
+  	display: inline-block;
+}
+div#detail div.detail_content div.left div.white div.share span.number:hover {
+	background: #F76C02;
+	color: #fff;
+}
 div#detail div.detail_content div.left div.white p {
 	padding-bottom: 10px;
+	text-align: left;
 }
 div#detail div.detail_content div.left div.white p:hover {
 	background: #FEFCFB;
@@ -1088,7 +1113,25 @@ div.helper span div input[type=checkbox]:checked ~ label {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
-div.helper span label 
+div.helper span div input[type=checkbox]:checked ~ label i:after {
+	content: "已";
+}
+.cd-popup-container .cd-buttons li {
+	margin-bottom: 0px !important;
+}
+.cd-popup-container .cd-buttons li a:hover {
+	text-decoration: none;
+}
+.cd-popup-container .cd-buttons li a:hover {
+	background: #F76C02;
+}
+.cd-popup-container p {
+	line-height: 25px;
+	font-size: 15px;
+}
+.cd-popup-container p a {
+	color: #F76C02;
+}
 /* 靜態文稿頁 */
 .row .col {
 	padding: 0;
@@ -1352,8 +1395,8 @@ table {
 	margin: 0 0 10px 10px;
 }
 .zebra tr td a.otherphoto img {
-	width: 100%;
-	margin-bottom: 10px;
+	width: 70%;
+	margin: 0 auto 10px auto;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -1422,14 +1465,94 @@ table {
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	padding: 2px 4px;
-	margin: 0 5px;
+	padding: 0;
+	margin: 5px;
 	font-size: 12px;
+	display: block;
+}
+.zebra tr td.btn a span {
+	white-space: nowrap;
 }
 .zebra tr td.btn a:hover {
 	color: #fff;
 	background: #F76C02;
 	text-decoration: none;
+}
+.zebra tr td span.prompt {
+	line-height: 32px;
+	display: inline-block;
+	margin-left: 5px;
+	color: #aaa;
+}
+.zebra tr.buy td input[type=radio] {
+	display: none;
+}
+.zebra tr.buy td label {
+	border: 3px solid #fff;
+	width: calc(50% - 11px);
+	text-align: center;
+}
+.zebra tr.buy td label div.title {
+	background: #fff;
+	font-size: 20px;
+	color: #555;
+	padding: 10px 0;
+}
+.zebra tr.buy td label div.title i {
+	display: block;
+	color: #aaa;
+	margin-top: 5px;
+	font-size: 15px;
+}
+.zebra tr.buy td label b {
+	display: block;
+	color: #F76C02;
+	font-size: 30px;
+	background: #eee;
+	padding: 10px 0;
+}
+.zebra tr.buy td label p {
+	line-height: 25px;
+	color: #aaa;
+	font-size: 15px;
+	padding: 10px 0;
+	text-align: center !important;
+}
+.zebra tr.buy td input[type=radio]:checked + label {
+	border: 3px solid #F76C02;
+}
+.zebra tr.credit td {
+	background: #fff;
+	border: 0;
+}
+.zebra tr.credit td label {
+	width: calc(25% - 11px);
+}
+.zebra tr.credit td img {
+	max-width: 60%;
+	width: 180px;
+	margin: 0 auto 5px auto;
+	display: block;
+}
+.zebra tr.friend td a {
+	vertical-align: middle;
+	display: block;
+	min-height: 50px;
+}
+.zebra tr.friend td a img {
+	float: left;
+	margin-right: 10px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+.zebra tr.friend td a:hover {
+	background: #eee;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
 }
 button.table_btn {
 	width: 200px;
@@ -1511,12 +1634,17 @@ div#release ul.accordionPart li .qa_content ul.tabs li.tab {
 div#release ul.accordionPart li .qa_content ul.tabs li.tab a {
 	height: auto;
 	font-size: 15px;
+	text-decoration: none;
 }
 div#release ul.accordionPart li .qa_content ul.tabs li.tab a i {
 	width: 64px;
-	height: 64px;
+	height: 55px;
 	display: block;
 	margin: 0px auto;
+}
+div#release ul.accordionPart li .qa_content ul.tabs li.tab a.active,
+div#release ul.accordionPart li .qa_content ul.tabs li.tab a:hover {
+	border: 0;
 }
 div#release ul.accordionPart li .qa_content ul.tabs li.tab a.icon1 i {
 	background: url('../img/icon_tab1.png') 0px 0px no-repeat;
@@ -1903,7 +2031,6 @@ div.backhome {
 		background: url(../img/logo.png) no-repeat center;
 	}
 	div.home_btn {
-		width: 50%;
 		margin: 40% auto 0 auto;
 	}
 	div.home_btn a {
@@ -1947,6 +2074,10 @@ div.backhome {
 	}
 	header.cd-header {
 		display: none;
+	}
+	div#explanation ul li {
+		width: 100%;
+		padding: 10px;
 	}
 }
 @media only screen and (max-width: 639px) {
@@ -1996,9 +2127,6 @@ div.backhome {
 		display: block;
 		float: none;
 	}
-	div#explanation ul li {
-		width: 100%;
-	}
 	div#explanation ul li b {
 		font-size: 15px;
 		line-height: 25px;
@@ -2006,17 +2134,14 @@ div.backhome {
 	div#explanation ul {
 		font-size: 11px;
 	}
-	div#explanation ul li span {
-		width: calc(100% - 70px);
-	}
 	div#release ul.accordionPart li .qa_content label.default {
 		width: calc(100% - 3px);
 		display: block;
 	}
 	div#detail div.detail_content div.right div.member img {
 		float: left;
-		width: 130px;
-		height: 130px;
+		width: 105px;
+		height: 105px;
 	}
 	div#detail div.detail_content div.right div.member span.people {
 		float: right;
@@ -2027,9 +2152,27 @@ div.backhome {
 	}
 	div#detail div.detail_content h1.detail_title {
 		display: block;
+		font-size: 20px;
 	}
 	div#detail div.detail_content {
 		margin-top: 15px;
+	}
+	div#detail div.detail_content div.left div.white div.table center {
+		display: none;
+	}
+	.zebra tr td a.otherphoto img {
+		width: 100%;
+	}
+	div#detail div.detail_content div.left div.white {
+		text-align: center;
+	}
+	div#detail div.detail_content div.left div.white a.btn {
+		float: none;
+		display: inline-block;
+	}
+	div#detail div.detail_content div.left div.white div.share {
+		float: none;
+		display: block;
 	}
 }
 @media only screen and (max-width: 480px) {
@@ -2037,7 +2180,6 @@ div.backhome {
 		display: none !important;
 	}
 	div.home_btn {
-		width: 70%;
 		margin: 35% auto 0 auto;
 	}
 	div.home_main title {
@@ -2095,6 +2237,18 @@ div.backhome {
 	}
 	#owl-demo .owl-item div span {
 		top: 25%;
+	}
+	div#detail div.breadcrumb {
+		display: none;
+	}
+	div#release ul.accordionPart li .qa_content button.btn_two {
+		width: 130px;
+	}
+	.zebra tr.buy td label p {
+		font-size: 12px;
+	}
+	.zebra tr.credit td img {
+		max-width: 100%;
 	}
 }
 /* jquery上傳檔案 */

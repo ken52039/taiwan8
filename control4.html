@@ -59,20 +59,54 @@
 			<h1>會員管理 - 付款設定</h1>
 			<div class="white">
 				<div class="table">
+					<ul>
+						<li><a>您的餘額<span>$125</span></a></li>
+					</ul>
+					<form>
 					<table class="zebra">
-					    <thead>
-					    <tr>
-					        <th width="7%"></th>        
-					        <th width="53%"></th>
-					        <th width="40%"></th>
+					    <tr class="buy">
+					        <td>
+					        	<input type="radio" name="money" id="money1" checked>
+					        	<label for="money1">
+					        		<div class="title">NT$100 + NT$20 <i>免費儲值點數</i></div>
+					        		<b>$100</b>
+					        		<p>備註請寫在這裡</p>
+					        	</label>
+					        	<input type="radio" name="money" id="money2">
+					        	<label for="money2">
+					        		<div class="title">NT$200 + NT$50 <i>免費儲值點數</i></div>
+					        		<b>$200</b>
+					        		<p>備註請寫在這裡</p>
+					        	</label>
+					        </td>
 					    </tr>
-					    </thead>  
-					    <tr>
-					        <td></td>        
-					        <td><a href="#"></a></td>
-					        <td></td>
+					    <tr class="buy credit">
+					        <td>
+					        	<input type="radio" name="credit" id="credit1" checked>
+					        	<label for="credit1">
+					        		<img src="assets/img/visa.gif">
+					        		<p>信用卡付款</p>
+					        	</label>
+					        	<input type="radio" name="credit" id="credit2">
+					        	<label for="credit2">
+					        		<img src="assets/img/emome.png">
+					        		<p>中華手機付款</p>
+					        	</label>
+					        	<input type="radio" name="credit" id="credit3">
+					        	<label for="credit3">
+					        		<img src="assets/img/fare.png">
+					        		<p>遠傳手機付款</p>
+					        	</label>
+					        	<input type="radio" name="credit" id="credit4">
+					        	<label for="credit4">
+					        		<img src="assets/img/taiwan.png">
+					        		<p>台哥大手機付款</p>
+					        	</label>
+					        </td>
 					    </tr>          
 					</table>
+					<button class="table_btn">購買點數</button>
+					</form>
 				</div>
 				<br>
 			</div>
