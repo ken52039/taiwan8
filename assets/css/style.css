@@ -1468,10 +1468,10 @@ table {
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	padding: 0;
-	margin: 5px;
+	padding: 0 5px;
+	margin: 5px 2px;
 	font-size: 12px;
-	display: block;
+	display: inline-block;
 }
 .zebra tr td.btn a span {
 	white-space: nowrap;
@@ -1613,6 +1613,23 @@ button.table_btn {
 }
 button.table_btn:hover {
 	background: #F76C02;
+}
+.project tbody tr:nth-child(1),
+.project tbody tr:nth-child(2),
+.project tbody tr:nth-child(5),
+.project tbody tr:nth-child(6),
+.project tbody tr:nth-child(9),
+.project tbody tr:nth-child(10) {
+	background: #fff;
+}
+.project tbody tr:nth-child(3),
+.project tbody tr:nth-child(4),
+.project tbody tr:nth-child(7),
+.project tbody tr:nth-child(8) {
+	background: #f5f5f5;
+}
+.project tbody tr td {
+	border: 0;
 }
 /* 發布任務 */
 div#release {
