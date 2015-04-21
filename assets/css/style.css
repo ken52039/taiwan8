@@ -1119,6 +1119,9 @@ div.helper span div input[type=checkbox]:checked ~ label i:after {
 .cd-popup-container .cd-buttons li {
 	margin-bottom: 0px !important;
 }
+.cd-popup-container .cd-buttons li a {
+	font-size: 15px;
+}
 .cd-popup-container .cd-buttons li a:hover {
 	text-decoration: none;
 }
