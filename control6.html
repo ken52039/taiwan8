@@ -70,8 +70,16 @@
 					    </tr>
 					    </thead>  
 					    <tr class="friend">
-					        <td><a href="#"><img src="http://goo.gl/C4jOQg"> 群組名稱</a></td>        
-					        <td><a href="#"><img src="http://goo.gl/C4jOQg"> 群組名稱</a></td>
+					        <td><a href="#" onclick="popup('popUpDiv_')"><img src="http://goo.gl/C4jOQg"> 群組名稱</a></td>        
+					        <td><a href="#" onclick="popup('popUpDiv_')"><img src="http://goo.gl/C4jOQg"> 群組名稱</a></td>
+					    </tr>
+					    <tr class="friend">
+					        <td colspan="2">
+					        	<form>
+					        		<span class="img"><label for="upload"><input type="file" id="upload">編輯</label></span>
+					        		<input type="text" placeholder="新增群組名稱"><button>創立群組</button>
+					        	</form>
+					        </td>        
 					    </tr>
 					    <thead style="border-top: 20px solid #fff;">
 					    <tr>
@@ -318,7 +326,73 @@
 						<center><a class="close" href="javascript:" onclick="popup('popUpDiv')">取消/關閉視窗</a></center>
 					</p>
 				</form>
-	</div>	
+	</div>
+	<div id="popUpDiv_" style="display:none;" class="popUpDiv">
+		<center>選擇好友加入群組<a href="detail.html">群組名稱：123飛訊團</a></center>
+				<form class="cd-form signup">
+					<div class="cd-filter-block">
+						<div class="helper">
+							<div class="member">
+								<img src="http://goo.gl/C4jOQg" class="photo">
+								<span class="people">
+									<a href="member1.html">
+										<span>Michael Carter Williams Michael Carter</span>
+									</a>
+									<a href="member.html" class="id"><span class="ok">身份已驗證 <i class="fa fa-check-square"></i></span></a>
+									<a href="member3.html" class="half"><b>好評<i>100%</i></b></a>
+									<a href="member2.html" class="half no"><b class="no">發案<i>99999</i></b></a>
+									<br clear="both">
+									<div><input type="checkbox" id="h2">  <label for="h2"><i class="fa fa-plus-square-o"></i>選擇</label></div>
+								</span>
+							</div>
+							<div class="member">
+								<img src="http://goo.gl/C4jOQg" class="photo">
+								<span class="people">
+									<a href="member1.html">
+										<span>Michael Carter Williams Michael Carter</span>
+									</a>
+									<a href="member.html" class="id"><span class="ok">身份已驗證 <i class="fa fa-check-square"></i></span></a>
+									<a href="member3.html" class="half"><b>好評<i>100%</i></b></a>
+									<a href="member2.html" class="half no"><b class="no">發案<i>99999</i></b></a>
+									<br clear="both">
+									<div><input type="checkbox" id="h1">  <label for="h1"><i class="fa fa-plus-square-o"></i>選擇</label></div>
+								</span>
+							</div>
+							<div class="member">
+								<img src="http://goo.gl/C4jOQg" class="photo">
+								<span class="people">
+									<a href="member1.html">
+										<span>Michael Carter Williams Michael Carter</span>
+									</a>
+									<a href="member.html" class="id"><span class="ok">身份已驗證 <i class="fa fa-check-square"></i></span></a>
+									<a href="member3.html" class="half"><b>好評<i>100%</i></b></a>
+									<a href="member2.html" class="half no"><b class="no">發案<i>99999</i></b></a>
+									<br clear="both">
+									<div><input type="checkbox" id="h3"> <label for="h3"><i class="fa fa-plus-square-o"></i>選擇</label></div>
+								</span>
+							</div>
+							<div class="member">
+								<img src="http://goo.gl/C4jOQg" class="photo">
+								<span class="people">
+									<a href="member1.html">
+										<span>Michael Carter Williams Michael Carter</span>
+									</a>
+									<a href="member.html" class="id"><span class="ok">身份已驗證 <i class="fa fa-check-square"></i></span></a>
+									<a href="member3.html" class="half"><b>好評<i>100%</i></b></a>
+									<a href="member2.html" class="half no"><b class="no">發案<i>99999</i></b></a>
+									<br clear="both">
+									<div><input type="checkbox" id="h4">  <label for="h4"><i class="fa fa-plus-square-o"></i>選擇</label></div>
+								</span>
+							</div>
+						</div>
+						<br clear="both">
+					</div>
+					<p class="fieldset">
+						<a class="close" href="javascript:" onclick="popup('popUpDiv_')">取消</a>
+						<input class="full-width okgo" type="submit" value="送出選擇">
+					</p>
+				</form>
+	</div>
 </body>
 <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
