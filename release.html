@@ -18,6 +18,8 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/1/daterangepicker-bs3.css" />
     <link rel="shortcut icon" href="https://taiwan8.com.tw/favicon.ico">
     <link href="//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-clockpicker.min.css">
     <link href="assets/css/nav.css" rel="stylesheet">
     <link href="assets/css/alert.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
@@ -121,19 +123,19 @@
                         樓層 <input type="number" id="floor_" value="1">
                     </label>
                     <label for="date" class="default">
-                        開始日期 <input type="text" id="date" name="daterange"  value="2015.01.01 ~ 2015.04.14">
+                        開始日期 <input type="text" id="date" name="daterange" value="2015/04/21">
                         <i class="fa fa-calendar"></i>
                     </label>
-                    <label for="time" class="default small">
-                        開始時間 <input type="text" id="time" value="07:00 ~ 18:00">
+                    <label for="time" class="default small clockpicker" data-align="top" data-autoclose="true">
+                        開始時間 <input type="text" id="time" value="07:00">
                         <i class="fa fa-clock-o"></i>
                     </label>
                     <label for="date-end" class="default">
-                        結束日期 <input type="text" id="date-end" name="daterange"  value="2015.01.01 ~ 2015.04.14">
+                        結束日期 <input type="text" id="date-end" name="daterange"  value="2015/12/31">
                         <i class="fa fa-calendar"></i>
                     </label>
-                    <label for="time-end" class="default small">
-                        結束時間 <input type="text" id="time-end" value="07:00 ~ 18:00">
+                    <label for="time-end" class="default small clockpicker" data-align="top" data-autoclose="true">
+                        結束時間 <input type="text" id="time-end" value="18:00">
                         <i class="fa fa-clock-o"></i>
                     </label>
                     <button type="button" href="javascript:" class="btn" onclick="setVisibility('step3', 'block');setVisibility('step2', 'none');document.getElementById('type').focus();setVisibility('step2_show', 'block');">下一步</button>
@@ -273,11 +275,13 @@
         });
 
         $('input[name="daterange"]').daterangepicker({
-            timePicker: true,
-            format: 'YYYY/MM/DD h:mm A',
+            timePicker: false,
+            format: 'YYYY/MM/DD',
             timePickerIncrement: 30,
-            timePicker12Hour: true,
-            timePickerSeconds: false
+            timePicker12Hour: false,
+            timePickerSeconds: false,
+            singleDatePicker: true,
+            showDropdowns: true
         });
 
 
@@ -288,5 +292,10 @@
     function setVisibility(id, visibility) {
         document.getElementById(id).style.display = visibility;
     }
+</script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap-clockpicker.min.js"></script>
+<script type="text/javascript">
+$('.clockpicker').clockpicker();
 </script>
 </html>

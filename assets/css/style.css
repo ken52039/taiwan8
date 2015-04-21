@@ -1865,6 +1865,9 @@ form.signup div.cd-filter-content textarea:focus {
 	border: 2px solid #F76C02;
 	background: #fff;
 }
+.clockpicker-align-left.popover>.arrow {
+	left: 100px;
+}
 /* 服務介紹 */
 header.cd-header {
 	height: 130px;
