@@ -694,7 +694,7 @@ div#detail div.detail_content h1 {
 	line-height: 30px;
 }
 div#detail div.detail_content h1.detail_title span {
-	display: inline-block;
+	float: right;
 	margin-left: 10px;
 	line-height: 30px;
 	border-radius: 5px;
@@ -1014,7 +1014,8 @@ div#detail div.breadcrumb a {
 	background: #fff;
 	width: 600px;
 	max-height: 100%;
-	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: hidden;
 	z-index: 9002;
 	top: 0px !important;
 	left: calc(50% - 300px) !important;
@@ -1128,12 +1129,41 @@ div.helper span div input[type=checkbox]:checked ~ label i:after {
 .cd-popup-container .cd-buttons li a:hover {
 	background: #F76C02;
 }
+.cd-popup-container {
+	padding-top: 30px;
+}
 .cd-popup-container p {
 	line-height: 25px;
 	font-size: 15px;
+	padding-top: 20px;
 }
 .cd-popup-container p a {
 	color: #F76C02;
+}
+.is-visible .cd-popup-container {
+	margin-top: 15%;
+}
+.cd-popup-container i {
+	color: #ccc;
+}
+.popUpDiv div.member {
+	text-align: center;
+	background: #fafafa;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.popUpDiv div.member img {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	vertical-align: top;
+}
+.popUpDiv div.member span.people {
+	display: inline-block;
+}
+p.fieldset {
+	clear: both;
 }
 /* 靜態文稿頁 */
 .row .col {
@@ -1381,9 +1411,11 @@ table {
 }
 .zebra tr td span.green {
 	color: green;
+	white-space: nowrap;
 }
 .zebra tr td span.orange {
 	color: #F76C02;
+	white-space: nowrap;
 }
 .zebra tr td span.rate {
 	color: #fff;
@@ -1455,13 +1487,14 @@ table {
 	height: auto;
 }
 .zebra tr td input[type=file] {
-	padding-top: 5px;
+	padding: 10px;
+	height: auto;
   	cursor: pointer;
   	margin-bottom: 10px;
 }
 .zebra tr td.btn {
-	text-align: center;
-	padding: 0px;
+	text-align: left;
+	padding: 0px 5px;
 }
 .zebra tr td.btn a {
 	border: 1px solid #ccc;
@@ -1469,7 +1502,7 @@ table {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	padding: 0 5px;
-	margin: 5px 2px;
+	margin: 0 2px 5px 2px;
 	font-size: 12px;
 	display: inline-block;
 }
@@ -1568,7 +1601,7 @@ table {
 	background: #ddd;
 }
 .zebra tr.friend td input[type=text] {
-	width: calc(100% - 130px);
+	width: calc(100% - 135px);
 	height: 50px;
 }
 .zebra tr.friend td button {
@@ -1630,6 +1663,7 @@ button.table_btn:hover {
 }
 .project tbody tr td {
 	border: 0;
+	padding: 10px 10px 5px 10px;
 }
 /* 發布任務 */
 div#release {
@@ -2226,6 +2260,7 @@ div.backhome {
 	}
 	div#detail div.detail_content div.left div.white {
 		text-align: center;
+		padding: 5px;
 	}
 	div#detail div.detail_content div.left div.white a.btn {
 		float: none;
