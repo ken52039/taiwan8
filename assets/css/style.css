@@ -1913,6 +1913,7 @@ div#release ul.accordionPart li .qa_content label.default textarea {
 	padding: 10px;
 	height: 200px;
 	margin-bottom: 20px;
+	line-height: 20px;
 }
 div#release ul.accordionPart li .qa_content label.default input:focus,
 div#release ul.accordionPart li .qa_content label.default textarea:focus,
