@@ -2414,3 +2414,43 @@ button.delete-photo-btn i {
 	left: 0px !important;
 	top: 0px !important;
 }
+/* 5/11修改首頁介紹icon & 任務標題底線 */
+div.main_list div a.title {
+	text-decoration: none;
+}
+div#explanation ul li {
+	color: #555;
+}
+div#explanation ul li b {
+  	display: inline-block;
+  	line-height: 50px;
+  	font-size: 18px;
+  	color: #000;
+  	font-weight: normal;
+}
+div#explanation ul li i {
+	float: none;
+	display: inline-block;
+	padding: 0;
+  	-webkit-border-radius: 34px;
+  	-moz-border-radius: 34px;
+  	border-radius: 34px;
+  	font-size: 18px;
+  	height: 32px;
+  	width: 32px;
+  	line-height: 32px;
+  	text-align: center;
+  	vertical-align: baseline;
+}
+div#explanation ul li i.green {
+	color: #35aa47;
+  	border: 1px solid #35aa47;
+}
+div#explanation ul li i.blue {
+	color: #0da3e2;
+  	border: 1px solid #0da3e2;
+}
+div#explanation ul li i.red {
+	color: #db3a1b;
+  	border: 1px solid #db3a1b;
+}
