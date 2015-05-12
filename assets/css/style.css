@@ -2454,3 +2454,7 @@ div#explanation ul li i.red {
 	color: #db3a1b;
   	border: 1px solid #db3a1b;
 }
+/* 5/12修改評價%數大小 */
+.zebra tr td span.rate {
+	width: 40px;
+}
