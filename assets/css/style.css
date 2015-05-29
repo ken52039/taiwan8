@@ -225,13 +225,13 @@ header.main a {
 	background-size: 50%;
 }
 div.home_btn {
-	width: 200px;
+	width: 240px;
 	margin: 200px auto 0 auto;
 	position: relative;
 	z-index: 1;
 }
 div.home_btn a {
-	width: 200px;
+	width: 240px;
 	line-height: 70px;
 	color: #fff;
 	font-size: 25px;
@@ -2327,7 +2327,11 @@ div.backhome {
 		display: none !important;
 	}
 	div.home_btn {
+		width: 200px;
 		margin: 35% auto 0 auto;
+	}
+	div.home_btn a {
+		width: 200px;
 	}
 	div.home_main title {
 		margin-bottom: -10px;
