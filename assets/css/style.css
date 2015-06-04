@@ -225,7 +225,8 @@ header.main a {
 	background-size: 50%;
 }
 div.home_btn {
-	width: 240px;
+	width: 100%;
+	text-align: center;
 	margin: 200px auto 0 auto;
 	position: relative;
 	z-index: 1;
@@ -242,8 +243,9 @@ div.home_btn a {
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	display: block;
+	display: inline-block;
 	background: #F76C02;
+	margin: 0px 10px;
 }
 div.home_btn a:hover {
 	text-decoration: none;
