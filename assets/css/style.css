@@ -245,7 +245,7 @@ div.home_btn a {
 	-webkit-border-radius: 5px;
 	display: inline-block;
 	background: #F76C02;
-	margin: 0px 10px;
+	margin: 5px 10px;
 }
 div.home_btn a:hover {
 	text-decoration: none;
