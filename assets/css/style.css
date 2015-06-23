@@ -390,6 +390,7 @@ div.main_list div {
 	width: 290px;
 	padding: 15px 15px 0 15px;
 	display: inline-block;
+	vertical-align: top;
 	margin: 15px;
 	background: #fff;
 	border-radius: 5px;
@@ -466,7 +467,7 @@ div.main_list div span.time {
 	line-height: 13px;
 }
 div.main_list div b.detail {
-	margin: 0 -15px 10px -15px;
+	margin: 10px -15px 10px -15px;
 	background: #F76C02;
 	color: #fff;
 	font-size: 20px;
