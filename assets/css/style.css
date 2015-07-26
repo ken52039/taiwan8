@@ -228,8 +228,11 @@ header.main {
 	padding: 5px 20px;
 }
 header.main a {
+	line-height: 44px;
 	height: 44px;
-	background-size: 50%;
+	padding-left: 30px;
+	background: url(../img/logo_.png) no-repeat left;
+	font-size: 20px;
 }
 div.home_btn {
 	width: 100%;
