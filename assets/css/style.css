@@ -208,11 +208,18 @@ header {
 	z-index: 1;
 }
 header a {
-	width: 151px;
+	width: auto;
 	height: 88px;
-	text-indent: -99999px;
+	line-height: 88px;
+	font-size: 30px;
+	color: #fff;
+	padding-left: 55px;
 	background: url(../img/logo.png) no-repeat left;
 	display: block;
+}
+header a:hover {
+	color: transparent;
+	text-decoration: none;
 }
 header.main {
 	width: 100%;
@@ -2174,10 +2181,17 @@ div.backhome {
 		width: 100%;
 	}
 	header a {
+		width: 100px;
 		height: 44px;
-		background-size: 50% !important;
+		line-height: 44px;
 		margin: 0px auto;
-		background: url(../img/logo.png) no-repeat center;
+		padding-left: 30px;
+		background: url(../img/logo_.png) no-repeat left;
+		text-align: center;
+		font-size: 20px;
+	}
+	header a:hover {
+		color: #fff;
 	}
 	div.home_btn {
 		margin: 40% auto 0 auto;
